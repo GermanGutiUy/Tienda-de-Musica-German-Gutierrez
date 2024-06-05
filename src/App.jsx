@@ -1,14 +1,17 @@
 import './App.css'
-import './components/navbar'
-import './components/ItemListContainer'
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer'
+import Contact from './components/Contact'
+import NewsLetter from './components/NewsLetter'
 
 function App() {
 
   return (
     <div>
-      <navbar />
+      <NavBar />
       <ItemListContainer />
-      <h1>hola hola</h1>
+      <NewsLetter />
+      <Contact />
     </div>
     
   )
