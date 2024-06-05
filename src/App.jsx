@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
 import Contact from './components/Contact';
 import NewsLetter from './components/NewsLetter';
