@@ -1,3 +1,4 @@
+import './navbar.css'
 import React from 'react'
 import CardWidget from './CardWidget' //Foto del carrito de compras de ReactIcon
 import Logo from "../img/Logo.jpg"
@@ -24,3 +25,4 @@ const navbar = () => {
 }
 
 export default navbar
+

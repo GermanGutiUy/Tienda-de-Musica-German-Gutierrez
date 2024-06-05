@@ -1,13 +1,14 @@
 import './App.css'
 import './components/navbar'
-import './components/CardWidget'
+import './components/ItemListContainer'
 
 function App() {
 
   return (
     <div>
-      <NavBar />
+      <navbar />
       <ItemListContainer />
+      <h1>hola hola</h1>
     </div>
     
   )

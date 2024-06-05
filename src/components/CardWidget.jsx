@@ -1,10 +1,9 @@
-import { TiShoppingCart } from "react-icons/ti";
+import CarroCompras from "../img/CarroCompras.png"
 
 const CardWidget = () => {
   return (
     <div>
-      <TiShoppingCart />
-      <img src="" alt="" /> {/*// Imagen de carrito */}
+      <img width={200} src={ CarroCompras } alt="" /> {/*// Imagen de carrito */}
       <p>10</p> {/* //De momento, numero de carrito fijo */}
     </div>
   )
