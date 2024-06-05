@@ -1,24 +1,23 @@
-import CardWidget from './CardWidget' //Import Foto del carrito de compras
-import Logo from "../img/Logo.jpg" //Import Foto del logo
-import React from 'react'
+import React from 'react';
+import CardWidget from './CardWidget'; // Import Foto del carrito de compras
+import Logo from "../img/Logo.jpg"; // Import Foto del logo
 
-const navbar = () => {
+const NavBar = () => {
   return (
-<nav className='NavBar'>
-  <div className='band'>
-    <img width = {200} src={ Logo } alt="" />
-  </div>
-  <ul>
-    <li>Cuerda</li>
-    <li>Viento</li>
-    <li>Percusion</li>
-    <li>Audio Pro</li>
-    <li>Blog</li>
-  </ul>
-    <CardWidget />
-    <NavBar />
-</nav>
-  )
+    <nav className='NavBar'>
+      <div className='band'>
+        <img width={200} src={Logo} alt="Logo" />
+      </div>
+      <ul>
+        <li>Cuerda</li>
+        <li>Viento</li>
+        <li>Percusion</li>
+        <li>Audio Pro</li>
+        <li>Blog</li>
+      </ul>
+      <CardWidget />
+    </nav>
+  );
 }
 
-export default navbar
+export default NavBar;

@@ -1,11 +1,10 @@
-import './App.css'
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
-import Contact from './components/Contact'
-import NewsLetter from './components/NewsLetter'
+import './App.css';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import Contact from './components/Contact';
+import NewsLetter from './components/NewsLetter';
 
 function App() {
-
   return (
     <div>
       <NavBar />
@@ -13,8 +12,7 @@ function App() {
       <NewsLetter />
       <Contact />
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;
