@@ -1,8 +1,9 @@
 import React from 'react';
 import CardWidget from './CardWidget'; // Import Foto del carrito de compras
 import Logo from "../img/Logo.jpg"; // Import Foto del logo
+import "../styles/NavBar.css"
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <nav className='NavBar'>
       <div className='band'>

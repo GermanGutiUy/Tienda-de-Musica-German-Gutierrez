@@ -1,0 +1,34 @@
+/* NavBar.css */
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #051422;
+    padding: 10px 10px;
+  }
+  
+  .NavBar .band img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .NavBar ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .NavBar ul li {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .NavBar ul li:hover {
+    color: #ddd;
+  }
+  

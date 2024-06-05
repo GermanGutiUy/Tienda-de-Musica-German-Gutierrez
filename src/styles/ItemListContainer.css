@@ -1,0 +1,17 @@
+.Tituloh1 {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+}
+
+.Tituloh2{
+  display: grid;
+  place-items: center;
+}
+
+.Presentacion {
+  text-align: center; /* Centrar el texto horizontalmente dentro del párrafo */
+  padding-left: 120px; /* Ajustar el espacio a la izquierda */
+  padding-right: 120px; /* Ajustar el espacio a la derecha */
+  line-height: 2; /* Espacio entre líneas, ajusta este valor según prefieras */
+}
