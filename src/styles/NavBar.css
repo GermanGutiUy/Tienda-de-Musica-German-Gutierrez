@@ -20,7 +20,7 @@
 .NavBar ul {
   list-style: none;
   display: flex;
-  gap: 10px; /* Ajusta el espacio entre los botones */
+  gap: 20px; /* Espacio entre los botones */
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px; /* Ajusta el relleno */
+  padding: 40px 100px; /* Ajusta el relleno */
   background-color: #e8cfa7;
   border-radius: 10px;
   color: #000000;
@@ -39,11 +39,15 @@
   flex: 1 1 auto; 
   text-align: center;
   white-space: nowrap;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
 }
 
 .NavBar ul li:hover {
   background-color: #a15d28;
   color: #ddd;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
 }
 
 @media (max-width: 768px) {

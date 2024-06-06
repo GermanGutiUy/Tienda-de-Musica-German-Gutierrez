@@ -1,12 +1,34 @@
 import React from 'react'
 import "../styles/ItemListContainer.css"
+import ItemListContainerAnimation from './ItemListContainerAnimation';
+
+//Importo fotos para la animacion
+import clapton from '../img/animationmain/clapton.jpg'
+import gilmour from '../img/animationmain/gilmour.jpg'
+import grohl from '../img/animationmain/grohl.jpg'
+import hendrix from '../img/animationmain/hendrix.jpg'
+import moore from '../img/animationmain/moore.jpg'
 
 const itemlistcontainer = () => {
+  const images = [
+    clapton,
+    gilmour,
+    grohl,
+    hendrix,
+    moore
+  ];
+
   return (
     <div>
       <h1 className="Tituloh1">
         Maister Melody (Ecomerce de musica)
       </h1>
+      
+      <div className='AnimationImg'>
+        <ItemListContainerAnimation images={images} />
+      </div>
+
+
       <h2 className="Tituloh2">
         Sobre Nosotros
         </h2>

@@ -1,16 +1,29 @@
 .Tituloh1 {
-  display: grid;
-  place-items: center;
-  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Usar min-height para asegurar que el contenedor sea al menos 50% de la altura de la pantalla */
   background-color: #e8cfa7;
-  color: #000000;
+  color: #000000;  
+  font-size: 50px;
+  font-family: Arial, sans-serif;
 }
 
 .Tituloh2 {
-  display: grid;
-  place-items: center;
+  text-align: center;
   background-color: #e8cfa7;
   color: #000000;
+  padding: 20px; /* Separo elementos */
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.AnimationImg {
+  display: flex;
+  justify-content: center;
+  max-width: 100px; /* Ancho */
+  margin: 0 auto;
 }
 
 .Presentacion {
@@ -20,23 +33,22 @@
   color: #000000;
   line-height: 2;
   box-sizing: border-box;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
 }
-
 
 @media (max-width: 768px) {
   .Presentacion {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .Tituloh1 {
-    height: auto;
-    padding: 20px;
-  }
-
-  .Presentacion {
     padding: 10px;
   }
+  
+  /* Ajustar estilos para pantallas más pequeñas si es necesario */
+}
+
+@media (min-width: 1200px) {
+  .Tituloh1 {
+    min-height: 70vh; /* Ajustar la altura mínima para pantallas grandes */
+  }
+  
+  /* Agregar ajustes adicionales para pantallas grandes si es necesario */
 }
