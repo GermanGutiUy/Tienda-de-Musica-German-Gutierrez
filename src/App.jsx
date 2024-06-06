@@ -6,7 +6,7 @@ import NewsLetter from './components/NewsLetter';
 
 function App() {
   return (
-    <div>
+    <div className='app-container'>
       <NavBar />
       <ItemListContainer />
       <NewsLetter />

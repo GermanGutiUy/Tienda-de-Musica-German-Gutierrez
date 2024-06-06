@@ -1,0 +1,13 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .app-container {
+    min-height: 100%;
+    background-color: #e8cfa7; /* Fondo de color */
+    display: flex;
+    flex-direction: column;
+  }
+  

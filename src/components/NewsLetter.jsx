@@ -1,11 +1,17 @@
 import React from 'react'
+import '../styles/NewsLetter.css'
 
 const NewsLetter = () => {
   return (
-    <div>
-      <h1>News Letter</h1>
-      <p>Suscribete a nuestro NEWS LETTER!</p>
-      <h2>Suscribete</h2>
+    <div className='newsletter-container'>
+      <h1 className='newsletter-title'>News Letter</h1>
+      
+      <div className="newsletter-input-container">
+      <input type="email" className="newsletter-input" placeholder="Ingrese su correo electrónico" />
+      <button className="newsletter-button">Suscríbete</button>
+      </div>
+
+      <p className="newsletter-description">¡Suscríbete a nuestro NEWS LETTER!</p>
     </div>
   )
 }
