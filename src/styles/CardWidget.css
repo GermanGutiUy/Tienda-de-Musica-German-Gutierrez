@@ -6,12 +6,6 @@
   padding: 15px;
 }
 
-.CardWidgetImage {
-  margin-right: 10px; 
-  max-width: 0px;
-  height: auto;
-}
-
 .CardWidgetNumber {
   margin-left: auto;
   margin-right: auto;
