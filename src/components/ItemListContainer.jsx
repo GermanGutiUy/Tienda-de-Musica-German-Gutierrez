@@ -9,7 +9,7 @@ import grohl from '../img/animationmain/grohl.jpg'
 import hendrix from '../img/animationmain/hendrix.jpg'
 import moore from '../img/animationmain/moore.jpg'
 
-const itemlistcontainer = () => {
+const itemlistcontainer = ( {preentrega}) => {
   const images = [
     clapton,
     gilmour,
@@ -28,7 +28,7 @@ const itemlistcontainer = () => {
         <ItemListContainerAnimation images={images} />
       </div>
 
-
+      <h2 className="Tituloh2">{preentrega}</h2>
       <h2 className="Tituloh2">
         Sobre Nosotros
         </h2>
