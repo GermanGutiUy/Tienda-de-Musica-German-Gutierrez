@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
+import contadorLogic from "./contadorLogic"
 
-const contador = () => {
+const contador = ({stock}) => {
    const [ contador, setContador ] = useSate(0)
 
 // Aumento de contador
     const aumentarContador = () => {
-        if(contador < 100) // Agregar el Srock maximo
+        if(contador < stock) // Agregar el Srock maximo
         setContador (contador + 1)
     }
 
@@ -17,9 +18,7 @@ const contador = () => {
 
   return (
     <div>
-        <button onClick ={disminuirContador}></button>
-        <p>Contador: {contador} </p>
-        <button onClick = {aumentarContador()} >+</button>
+      <contadorLogic contador = {contadorLogic} aumentarContador = {aumentarContador} disminuirContador = {disminuirContador}/> //Children
     </div>
   )
 }
