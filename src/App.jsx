@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='app-container'>
       <NavBar />
-      <ItemListContainer preentrega = "Esto es para la preentrega"/>
+      <ItemListContainer />
       <NewsLetter />
       <Contact />
     </div>
