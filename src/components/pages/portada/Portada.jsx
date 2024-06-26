@@ -20,24 +20,6 @@ const Portada = ({}) => {
     hendrix,
     moore
   ];
-  
-  const [productos, serProductos] = useState([])
-
-  useEffect (()=>{
-
-    obtenerProductos()
-    .then((respuesta) => {
-      serProductos(respuesta)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-    .finally(() => {
-      console.log("Finañlizo la promesa")
-    })
-
-  }, [])
-
 
   return (
     <div>
