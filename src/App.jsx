@@ -1,14 +1,14 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import Contact from './components/Contact';
-import NewsLetter from './components/NewsLetter';
+import NavBar from './components/NavBar/NavBar';
+import Portada from './components/pages/portada/Portada';
+import Contact from './components/pages/portada/Contact';
+import NewsLetter from './components/pages/portada/NewsLetter';
 
 function App() {
   return (
     <div className='app-container'>
       <NavBar />
-      <ItemListContainer />
+      <Portada />
       <NewsLetter />
       <Contact />
     </div>

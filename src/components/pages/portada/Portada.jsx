@@ -1,15 +1,18 @@
 import React from 'react'
-import "../styles/ItemListContainer.css"
-import ItemListContainerAnimation from './ItemListContainerAnimation';
+import "../../../styles/Portada.css"
+import AnimationPortada from './AnimationPortada';
+import { useState, useEffect } from 'react';
 
 //Importo fotos para la animacion
-import clapton from '../img/animationmain/clapton.jpg'
-import gilmour from '../img/animationmain/gilmour.jpg'
-import grohl from '../img/animationmain/grohl.jpg'
-import hendrix from '../img/animationmain/hendrix.jpg'
-import moore from '../img/animationmain/moore.jpg'
+import clapton from '../../../img/animationmain/clapton.jpg'
+import gilmour from '../../../img/animationmain/gilmour.jpg'
+import grohl from '../../../img/animationmain/grohl.jpg'
+import hendrix from '../../../img/animationmain/hendrix.jpg'
+import moore from '../../../img/animationmain/moore.jpg'
+import { PiNotMemberOfBold } from 'react-icons/pi';
 
-const itemlistcontainer = ( {preentrega}) => {
+const Portada = ({}) => {
+
   const images = [
     clapton,
     gilmour,
@@ -17,6 +20,24 @@ const itemlistcontainer = ( {preentrega}) => {
     hendrix,
     moore
   ];
+  
+  const [productos, serProductos] = useState([])
+
+  useEffect (()=>{
+
+    obtenerProductos()
+    .then((respuesta) => {
+      serProductos(respuesta)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    .finally(() => {
+      console.log("Finañlizo la promesa")
+    })
+
+  }, [])
+
 
   return (
     <div>
@@ -25,10 +46,9 @@ const itemlistcontainer = ( {preentrega}) => {
       </h1>
       
       <div className='AnimationImg'>
-        <ItemListContainerAnimation images={images} />
+        <AnimationPortada images={images} />
       </div>
 
-      <h2 className="Tituloh2">{preentrega}</h2>
       <h2 className="Tituloh2">
         Sobre Nosotros
         </h2>
@@ -42,4 +62,4 @@ const itemlistcontainer = ( {preentrega}) => {
   )
 }
 
-export default itemlistcontainer
+export default Portada

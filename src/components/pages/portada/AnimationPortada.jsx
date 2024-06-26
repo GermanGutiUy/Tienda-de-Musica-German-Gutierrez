@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const ItemListContainerAnimation = ({ images }) => {
+const AnimationPortada = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const ItemListContainerAnimation = ({ images }) => {
   );
 };
 
-export default ItemListContainerAnimation;
+export default AnimationPortada;
