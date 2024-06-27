@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import {obtenerProductos} from "../../../data/data.js"
+import {obtenerProductos} from "../../data/data.js"
 import itemDetail from './itemDetail.jsx'
 
 const itemDetailContainer = () => {
