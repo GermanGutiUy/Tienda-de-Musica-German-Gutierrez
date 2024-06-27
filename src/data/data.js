@@ -1,7 +1,7 @@
 const productos = [
     {
         id: "asd",
-        categoria: "asd",
+        categoria: "asdasds",
         nombre: "asd",
         descripcion:"asdas",
         stock:"asd",

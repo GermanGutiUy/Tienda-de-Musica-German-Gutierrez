@@ -4,6 +4,9 @@ import Portada from './components/pages/portada/Portada';
 import Contact from './components/pages/portada/Contact';
 import NewsLetter from './components/pages/portada/NewsLetter';
 
+
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 function App() {
   return (
     <div className='app-container'>
@@ -11,6 +14,12 @@ function App() {
       <Portada />
       <NewsLetter />
       <Contact />
+
+
+      <ItemListContainer />
+
+
+
     </div>
   );
 }
