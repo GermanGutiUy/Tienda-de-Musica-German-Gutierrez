@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ItemList from "../ItemListContainer/itemList.jsx"
 import useLoading from '../hooks/useLoading.jsx';
 import loading from './loading.jsx'; 
+import { useParams } from 'react-router-dom';
 import "./itemlistcontainer.css"
 //import { getProducts,getProductsById, addProduct, modProdcut } from "../utils/fetchApi.js" | Funcion para base de datos en apis
 
@@ -11,7 +12,10 @@ import "./itemlistcontainer.css"
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
 
+    const {idCategoria} = useParams ()
+
     const {isLoading, showLoading,hideLoading} = useLoading()
+
 
     useEffect (() => {
       
@@ -20,7 +24,14 @@ const ItemListContainer = () => {
 
         obtenerProductos()
         .then((respuesta) => {
-          setProductos(respuesta);
+          if (idCategoria) {
+            //filtar los productos por categoria
+            const prodcutosFIltados = respuesta.filter((prodcuto) => prodcuto.categoria === idCategoria)
+            serProdcutos(prodcutosFIltados)
+          }else{
+            //guardar toda la lista de producto
+            setProductos(respuesta);
+          }
         })
         .catch((erros) => {
           console.log(error);
@@ -29,10 +40,14 @@ const ItemListContainer = () => {
           //Oculaar pantalla de carga
           hideLoading()
         });
-      },[]);
+      },[idCategoria]);
+
+
+
       return (
         <div classname = "itemlistcontainer">
           {isloading ?  <loading />: <ItemList productos = {productos} />}
+          <ItemList prodcutos = {productos} />
         </div>
     );
 };

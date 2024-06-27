@@ -1,7 +1,7 @@
 const productos = [
     {
         id: "asd",
-        categoria: "asdasds",
+        categoria: "cuerda",
         nombre: "asd",
         descripcion:"asdas",
         stock:"asd",
@@ -10,7 +10,7 @@ const productos = [
     },
     {
         id:"asd",
-        categoria:"ds",
+        categoria:"viento",
         nombre:"asd",
         descripcion:"asdas",
         stock:"asd",
@@ -19,7 +19,7 @@ const productos = [
     },
     {
         id:"asasdd",
-        categoria:"asd",
+        categoria:"audiopro",
         nombre:"asd",
         descripcion:"asdas",
         stock:"asd",

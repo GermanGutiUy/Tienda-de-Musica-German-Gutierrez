@@ -1,26 +1,21 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Portada from './components/pages/portada/Portada';
-import Contact from './components/pages/portada/Contact';
-import NewsLetter from './components/pages/portada/NewsLetter';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
-    <div className='app-container'>
+    <BrowserRouter>
       <NavBar />
-      <Portada />
-      <NewsLetter />
-      <Contact />
 
+      <Routes>
+        <Route path = "/" element = {<ItemListContainer />} />
+        <Route path = "/categoria/:idCategoria" element = {<ItemListContainer />}/>
+      </Routes>
 
-      <ItemListContainer />
-
-
-
-    </div>
+    </BrowserRouter>
   );
 }
 
