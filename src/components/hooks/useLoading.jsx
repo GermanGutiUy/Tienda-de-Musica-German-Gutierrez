@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const useLoading = () => {
     const [isLoading,setIsLoading] = useState (false)
 
@@ -11,10 +13,7 @@ const useLoading = () => {
         setIsLoading (false)
     }
 
-    //pantalla de carga
-    const loadingScreen = <div> Catgando...</div>
-
-    return { isLoading, showLoading, hideLoading, loadingScreen }
+    return { isLoading, showLoading, hideLoading }
 
 
 }

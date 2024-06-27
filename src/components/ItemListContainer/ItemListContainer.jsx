@@ -2,15 +2,16 @@ import React from 'react'
 import { obtenerProductos } from "../../data/data.js" // Importo data
 import { useState, useEffect } from 'react';
 import ItemList from "../ItemListContainer/itemList.jsx"
-import "./itemlistcontainer.css"
 import useLoading from '../hooks/useLoading.jsx';
+import loading from './loading.jsx'; 
+import "./itemlistcontainer.css"
 //import { getProducts,getProductsById, addProduct, modProdcut } from "../utils/fetchApi.js" | Funcion para base de datos en apis
 
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
 
-    const {isLoading, showLoading,hideLoading,loadingScreen} = useLoading()
+    const {isLoading, showLoading,hideLoading} = useLoading()
 
     useEffect (() => {
       
@@ -31,7 +32,7 @@ const ItemListContainer = () => {
       },[]);
       return (
         <div classname = "itemlistcontainer">
-          {isloading ?  loadingScreen: <ItemList productos = {productos} />}
+          {isloading ?  <loading />: <ItemList productos = {productos} />}
         </div>
     );
 };
