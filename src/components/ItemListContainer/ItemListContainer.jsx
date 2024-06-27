@@ -2,24 +2,38 @@ import React from 'react'
 import { obtenerProductos } from "../../data/data.js" // Importo data
 import { useState, useEffect } from 'react';
 import ItemList from "../ItemListContainer/itemList.jsx"
-import { getProductsById } from '../utils/fetchApi.js';
+import "./itemlistcontainer.css"
+import useLoading from '../hooks/useLoading.jsx';
 //import { getProducts,getProductsById, addProduct, modProdcut } from "../utils/fetchApi.js" | Funcion para base de datos en apis
 
+
 const ItemListContainer = () => {
-    const [prodcutos, setProductos] = useState([]);
+    const [productos, setProductos] = useState([]);
+
+    const {isLoading, showLoading,hideLoading,loadingScreen} = useLoading()
 
     useEffect (() => {
-        getProducts()
-            .then((data) => setProductos (data))
+      
+      //Mostrar pantalla de carga
+      showLoading()
 
-            getProductsById(idProduct)
-                .then((data) => console.log(data))
-    }, []);
-  return (
-    <div className = "itemlistcontainer">
-      <ItemList productos = {prodcutos} />
-    </div>
-  )
-}
+        obtenerProductos()
+        .then((respuesta) => {
+          setProductos(respuesta);
+        })
+        .catch((erros) => {
+          console.log(error);
+        })
+        .finally(() => {
+          //Oculaar pantalla de carga
+          hideLoading()
+        });
+      },[]);
+      return (
+        <div classname = "itemlistcontainer">
+          {isloading ?  loadingScreen: <ItemList productos = {productos} />}
+        </div>
+    );
+};
 
 export default ItemListContainer

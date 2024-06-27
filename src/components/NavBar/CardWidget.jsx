@@ -1,5 +1,5 @@
 import { GiShoppingCart } from "react-icons/gi"; //Importo el carrito de reac icons
-import "../../styles/CardWidget.css";
+import './CardWidget.css';
 
 const CardWidget = () => {
   return (
