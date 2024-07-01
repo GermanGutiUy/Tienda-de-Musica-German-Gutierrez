@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ItemDetailContaine from './components/itemDetailContainer/itemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Error from '/components/Error.jsx'
+import Error from './components/Error.jsx'
  
 function App() {
   return (

@@ -46,7 +46,7 @@ const ItemListContainer = () => {
 
       return (
         <div classname = "itemlistcontainer">
-          {isloading ?  <loading />: <ItemList productos = {productos} />}
+          {isLoading ?  <loading />: <ItemList productos = {productos} />}
           <ItemList prodcutos = {productos} />
         </div>
     );

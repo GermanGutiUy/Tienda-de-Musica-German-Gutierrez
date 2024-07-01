@@ -33,7 +33,7 @@ const productos = [
   
       //Simulamos un retraso de red de 3 segundos
         setTimeout(()=>{
-          resolve("Se resolvio")
+          resolve([])
         },3000)
         })
       }
