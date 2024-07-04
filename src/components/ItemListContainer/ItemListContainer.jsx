@@ -33,7 +33,7 @@ const ItemListContainer = () => {
             setProductos(respuesta);
           }
         })
-        .catch((erros) => {
+        .catch((error) => {
           console.log(error);
         })
         .finally(() => {

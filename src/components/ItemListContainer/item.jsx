@@ -22,11 +22,11 @@ const item = ({ prodcuto }) => {
   
 
   return (
-    <Link to = {"/detalle/" + prodcuto.id} className = "item" style = {estilosCard} onMauseOver = {handleMouseOver} onMauseLeave = {handleMouseLeave}>
-        <img src={prodcuto.imagen} width = {200} alt =""/>
+    <Link to = {"/detalle/" + producto.id} className = "item" style = {estilosCard} onMauseOver = {handleMouseOver} onMauseLeave = {handleMouseLeave}>
+        <img src={producto.imagen} width = {200} alt =""/>
         <div className='descriptiocn-item'>
-          <p>{prodcuto.nombre}</p>
-          <p>${prodcuto.precio}</p>
+          <p>{producto.nombre}</p>
+          <p>${producto.precio}</p>
         </div>
     </Link>
   )
@@ -34,4 +34,4 @@ const item = ({ prodcuto }) => {
 
 export default item
 
-// <Link to={"/detalle/" + prodcuto.id}>Ver detalles</Link>
+// <Link to={"/detalle/" + producto.id}>Ver detalles</Link>

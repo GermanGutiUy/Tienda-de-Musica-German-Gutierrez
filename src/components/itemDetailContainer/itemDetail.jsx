@@ -3,8 +3,8 @@ import React from 'react'
 const itemDetail = ({producto}) => {
   return (
     <div>
-      <h2>{prodcuto.nombre}</h2>
-      <img src ={prodcuto.imagen} alt="" />
+      <h2>{producto.nombre}</h2>
+      <img src ={producto.imagen} alt="" />
     </div>
   )
 }

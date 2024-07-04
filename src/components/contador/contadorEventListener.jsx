@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 
 const contadorEventListener = () => {
-    const[contador, setContado] = useState(1)
+    const[contador, setContador] = useState(1)
 
     const handleClick = () => {
         setContador = ( (prevContador) => prevContador + 1)

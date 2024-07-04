@@ -7,12 +7,12 @@ import { useParams } from 'react-router-dom'
 const itemDetailContainer = () => {
     const [producto, serProducto] = useState({})
 
-    const { idProdcuto } = useParams()
+    const { idProducto } = useParams()
 
     useEffect (() =>{
         obtenerProductos()
         .then((data) =>  {
-            const productoFiltrado = data.find((prodcutoData) => prodcutoData.id === idProdcuto)
+            const productoFiltrado = data.find((productoData) => productoData.id === idProducto)
             serProducto (productoFiltrado)
         })
     }, [])
