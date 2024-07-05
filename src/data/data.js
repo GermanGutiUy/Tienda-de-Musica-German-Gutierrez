@@ -1,6 +1,6 @@
 const productos = [
     {
-        id: "asd",
+        id: "123565",
         categoria: "cuerda",
         nombre: "asd",
         descripcion:"asdas",
@@ -9,7 +9,7 @@ const productos = [
         imagen: "asd"
     },
     {
-        id:"asd",
+        id:"9654",
         categoria:"viento",
         nombre:"asd",
         descripcion:"asdas",
@@ -18,7 +18,7 @@ const productos = [
         imagen: "asd"
     },
     {
-        id:"asasdd",
+        id:"9969",
         categoria:"audiopro",
         nombre:"asd",
         descripcion:"asdas",

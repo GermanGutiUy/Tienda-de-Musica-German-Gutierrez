@@ -17,8 +17,8 @@ function App() {
 
         <Route path = "/categoria/:formulario" element = {<Formulario />}/>
 
-        <Route path = "/detalle/:idProdcuto" element = {<ItemDetailContaine />}/>
-        <Route path = "/detalle/:idProdcuto" element = {<Error />}/>
+        <Route path = "/detalle/:idProducto" element = {<ItemDetailContaine />}/>
+        <Route path = "/detalle/:idProducto" element = {<Error />}/>
       </Routes>
 
     </BrowserRouter>

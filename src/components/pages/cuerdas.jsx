@@ -21,7 +21,7 @@ const cuerdas = () => {
 
   return (
     <div>
-        <ItemList prodcutos = {productos} />
+        <ItemList productos = {productos} />
     </div>
   )
 }

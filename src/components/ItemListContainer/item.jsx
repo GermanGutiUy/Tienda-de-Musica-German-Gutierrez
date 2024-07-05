@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const item = ({ prodcuto }) => {
+const item = ({ producto }) => {
   const [expandir, serExpandir] = useState(false)
 
   //fuincion manejadora del evento cuando el mouse esta encima de la card

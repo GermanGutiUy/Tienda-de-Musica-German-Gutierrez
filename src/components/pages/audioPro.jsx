@@ -21,7 +21,7 @@ const audioPro = () => {
 
   return (
     <div>
-        <ItemList prodcutos = {productos} />
+        <ItemList productos = {productos} />
     </div>
   )
 }

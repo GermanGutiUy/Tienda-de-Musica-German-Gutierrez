@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 const hocBuscador = (component) => {
     return function () {
-        const [prodcutos, setProductos] = useState([])
+        const [productos, setProductos] = useState([])
         const [consulta, setConsulta] = useState("")
 
         useEffect(() => {
@@ -15,12 +15,12 @@ const hocBuscador = (component) => {
 
         }, [])
 
-        const search = (listaProdcutos) => {
-            const listaProdcutosFiltrados = listaProductos.filter(() => (
+        const search = (listaProductos) => {
+            const listaProductosFiltrados = listaProductos.filter(() => (
                 producto["title"].toLoweCase().includes(consulta)
             ))
 
-            return listaProdcutosFiltrados
+            return listaProductosFiltrados
 
         }
 
@@ -29,10 +29,10 @@ const hocBuscador = (component) => {
         }
 
         return (
-            prodcutos && (
+            productos && (
                 <div>
                     <imput type = "text" placeholder = "Bucar..." onChange = {changeImput} />
-                    <Component prodcutos = { search(productos)}/>
+                    <Component productos = { search(productos)}/>
                 </div>
             )
         )

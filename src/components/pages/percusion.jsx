@@ -21,7 +21,7 @@ const percusion = () => {
 
   return (
     <div>
-        <ItemList prodcutos = {productos} />
+        <ItemList productos = {productos} />
     </div>
   )
 }
