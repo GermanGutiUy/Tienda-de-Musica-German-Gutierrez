@@ -206,7 +206,7 @@ const obtenerProductos = () => {
     // Simulamos un retraso de red de 3 segundos
     setTimeout(() => {
       resolve(productos);
-    }, 3000);
+    }, 1500);
   });
 };
 

@@ -46,8 +46,6 @@
 .NavBar ul li:hover {
   background-color: #a15d28;
   color: #ddd;
-  font-size: 50px;
-  font-family: Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -68,7 +66,7 @@
   }
 }
 
-/* Configuracion para pantallas muy chicas */
+/* Configuración para pantallas muy chicas */
 @media (max-width: 480px) {
   .NavBar .brand img {
     max-width: 100%;
