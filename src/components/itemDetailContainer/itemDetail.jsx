@@ -1,12 +1,14 @@
 import React from 'react'
+import './ItemDetail.css'
 
-const itemDetail = ({producto}) => {
+const ItemDetail = ({producto}) => {
   return (
     <div>
       <h2>{producto.nombre}</h2>
-      <img src ={producto.imagen} alt="" />
+      <p>{producto.descripcionLargo}</p>
+      <img src ={producto.imagen} alt={producto.nombre} />
     </div>
   )
 }
 
-export default itemDetail
+export default ItemDetail

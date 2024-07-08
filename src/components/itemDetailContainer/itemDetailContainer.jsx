@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import {obtenerProductos} from "../../data/data.js"
-import itemDetail from './itemDetail.jsx'
+import ItemDetail from './ItemDetail.jsx'
 import { useParams } from 'react-router-dom'
+import './ItemDetailContainer.css'
 
-const itemDetailContainer = () => {
+const ItemDetailContainer = () => {
     const [producto, serProducto] = useState({})
 
     const { idProducto } = useParams()
@@ -20,8 +21,8 @@ const itemDetailContainer = () => {
 
 
   return (
-    <itemDetail producto = {producto} />
+    <ItemDetail producto = {producto} />
   )
 }
 
-export default itemDetailContainer
+export default ItemDetailContainer

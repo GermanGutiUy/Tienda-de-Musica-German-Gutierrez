@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .itemListDiv {
-  background-color: #698495; /* Color de fondo */
-  border: 1px solid #5e6b70; /* Color del borde */
+  background-color: #698495;
+  /* border: 1px solid #5e6b70; */
   padding: 2em;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  grid-template-columns: repeat(5, 1fr); /* 4 columnas */
   gap: 1em; /* Espacio entre los items */
   font-family: 'Roboto', sans-serif;
 }
 
 .itemList {
-  background-color: #533e28; /* Color de fondo */
+  background-color: #533e28;
   padding: 20px;
   border-radius: 5px;
   display: flex;
@@ -23,7 +23,7 @@
 
 @media (max-width: 768px) {
   .itemListDiv {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas en pantallas pequeñas */
   }
 }
 

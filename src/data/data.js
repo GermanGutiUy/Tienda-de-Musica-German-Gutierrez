@@ -26,7 +26,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bajo1
+    imagen: bajo1,
+    descripcionLargo: "HOLA DETALLE LARGO LARGO AAAAAASDASDASDASD"
   },  
   {
     id: "45623",
@@ -35,7 +36,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bajo2
+    imagen: bajo2,
+    descripcionLargo: ""
   },
   {
     id: "5448",
@@ -44,7 +46,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra1
+    imagen: guitarra1,
+    descripcionLargo: ""
   },
   {
     id: "9556",
@@ -53,7 +56,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra2 
+    imagen: guitarra2,
+    descripcionLargo: ""
   },
   {
     id: "3656",
@@ -62,7 +66,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra3
+    imagen: guitarra3,
+    descripcionLargo: ""
   },
   {
     id: "96565",
@@ -71,7 +76,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarraelectrica1
+    imagen: guitarraelectrica1,
+    descripcionLargo: ""
   },
   {
     id: "3268",
@@ -80,7 +86,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarraelectrica2
+    imagen: guitarraelectrica2,
+    descripcionLargo: ""
   },
   {
     id: "95456",
@@ -89,7 +96,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin1
+    imagen: violin1,
+    descripcionLargo: ""
   },
   {
     id: "2154",
@@ -98,7 +106,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin2
+    imagen: violin2,
+    descripcionLargo: ""
   },
   {
     id: "63262",
@@ -107,7 +116,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin2
+    imagen: violin2,
+    descripcionLargo: ""
   },
   {
     id: "75454",
@@ -116,7 +126,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateria1
+    imagen: bateria1,
+    descripcionLargo: ""
   },
   {
     id: "9563264",
@@ -125,7 +136,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateria2
+    imagen: bateria2,
+    descripcionLargo: ""
   },
   {
     id: "521445",
@@ -134,7 +146,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateriaelectrica
+    imagen: bateriaelectrica,
+    descripcionLargo: ""
   },
   {
     id: "311151",
@@ -143,7 +156,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: cajonperuano
+    imagen: cajonperuano,
+    descripcionLargo: ""
   },
   {
     id: "9569653",
@@ -152,7 +166,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: armonica
+    imagen: armonica,
+    descripcionLargo: ""
   },
   {
     id: "365652",
@@ -161,7 +176,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: trompeta
+    imagen: trompeta,
+    descripcionLargo: ""
   },
   {
     id: "224525",
@@ -170,7 +186,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: saxo
+    imagen: saxo,
+    descripcionLargo: ""
   },
   {
     id: "9656324",
@@ -179,7 +196,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: auriculares
+    imagen: auriculares,
+    descripcionLargo: ""
   },
   {
     id: "75421",
@@ -188,7 +206,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: interfaz
+    imagen: interfaz,
+    descripcionLargo: ""
   },
   {
     id: "45686",
@@ -197,7 +216,8 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: mixer
+    imagen: mixer,
+    descripcionLargo: ""
   },
 ];
 
