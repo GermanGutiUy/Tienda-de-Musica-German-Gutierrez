@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../../styles/Contact.css';
+import React from 'react';
+import './Contact.css';
 
 const Contact = () => {
   return (
@@ -14,14 +14,14 @@ const Contact = () => {
         </ul>
       </div>
       <div className='WorkDiv'>
-        <h1 className='Work'>Horarios de atencion al Cliente</h1>
+        <h1 className='Work'>Horarios de atención al Cliente</h1>
         <ul className='ListWork'>
           <li>Lunes a Viernes de 9:00 - 18:00</li>
           <li>Sábados de 9:00 a 13:00</li>
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

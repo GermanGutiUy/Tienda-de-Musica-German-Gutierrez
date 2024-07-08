@@ -1,19 +1,14 @@
-import React from 'react'
-import { BeatLoader } from 'react-spinners'
+import React from 'react';
+import { BeatLoader } from 'react-spinners';
+import "./loading.css";
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div 
-    style={{
-        width: "100%",
-        heignt: "90vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems:"Center"}}>
-    <BeatLoader />
-    <p>Cargando...</p>
+    <div className="loading-container">
+      <BeatLoader />
+      <p className="loading-text">Cargando...</p>
     </div>
-  )
-}
+  );
+};
 
-export default loading
+export default Loading;

@@ -1,33 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import './item.css'
 
 const item = ({ producto }) => {
-  const [expandir, serExpandir] = useState(false)
+  const [expandir, setExpandir] = useState(false)
 
-  //fuincion manejadora del evento cuando el mouse esta encima de la card
+  //fuincion del evento cuando el mouse esta encima de la card
   const handleMouseOver = () => {
     setExpandir(true)
   }
 
-    //fuincion manejadora del evento cuando el mouse esta fuera de la card
-    const handleMouseLeave = () => {
-      setExpandir(false)
-    }
+  //fuincion del evento cuando el mouse esta fuera de la card
+  const handleMouseLeave = () => {
+    setExpandir(false)
+  }
 
-    const estilosCard = {
-      transform : expandir ? 'scale(1.1)' : 'scale(1)',
-      transition: 'transform 0.3s ease-in-out'
-    }
-  
+  const estilosCard = {
+    transform: expandir ? 'scale(1.1)' : 'scale(1)',
+    transition: 'transform 0.2s ease-in-out'
+  }
 
   return (
-    <Link to = {"/detalle/" + producto.id} className = "item" style = {estilosCard} onMauseOver = {handleMouseOver} onMauseLeave = {handleMouseLeave}>
-        <img src={producto.imagen} width = {200} alt =""/>
-        <div className='descriptiocn-item'>
-          <p>{producto.nombre}</p>
-          <p>${producto.precio}</p>
-        </div>
+    <Link 
+      to={"/detalle/" + producto.id} 
+      className="item" 
+      style={estilosCard} 
+      onMouseOver={handleMouseOver} 
+      onMouseLeave={handleMouseLeave}
+    >
+      <img src={producto.imagen} width={200} alt={producto.nombre} />
+      <div className='description-item'>
+        <p>{producto.nombre}</p>
+        <p>${producto.precio}</p>
+      </div>
     </Link>
   )
 }

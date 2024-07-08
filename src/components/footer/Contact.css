@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.ContactContainer {
+  display: flex;
+  padding: 20px;
+  background-color: rgba(5, 20, 34, 0.8);
+  border: 1px solid #5e6b70;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+.ContactDiv, .WorkDiv {
+  flex: 1;
+  margin: 10px;
+}
+
+.Contact, .Work {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #e8cfa7;
+}
+
+.ListContact, .ListWork {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .ContactContainer {
+    flex-direction: column;
+  }
+
+  .ContactDiv, .WorkDiv {
+    margin: 10px 0;
+  }
+}

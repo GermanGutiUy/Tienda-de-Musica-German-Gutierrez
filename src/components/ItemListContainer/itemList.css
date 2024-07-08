@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .itemListDiv {
   background-color: #698495; /* Color de fondo */
   border: 1px solid #5e6b70; /* Color del borde */
   padding: 2em;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 1em; /* Espacio entre los items */
+  font-family: 'Roboto', sans-serif;
 }
 
 .itemList {
@@ -13,4 +19,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .itemListDiv {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .itemListDiv {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
 }

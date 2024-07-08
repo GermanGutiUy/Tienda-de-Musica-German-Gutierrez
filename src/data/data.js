@@ -26,7 +26,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bajo1 // Usar la imagen importada
+    imagen: bajo1
   },  
   {
     id: "45623",
@@ -35,7 +35,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bajo2 // Usar la imagen importada
+    imagen: bajo2
   },
   {
     id: "5448",
@@ -44,7 +44,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra1 // Usar la imagen importada
+    imagen: guitarra1
   },
   {
     id: "9556",
@@ -53,7 +53,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra2 // Usar la imagen importada
+    imagen: guitarra2 
   },
   {
     id: "3656",
@@ -62,7 +62,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarra3 // Usar la imagen importada
+    imagen: guitarra3
   },
   {
     id: "96565",
@@ -71,7 +71,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarraelectrica1 // Usar la imagen importada
+    imagen: guitarraelectrica1
   },
   {
     id: "3268",
@@ -80,7 +80,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: guitarraelectrica2 // Usar la imagen importada
+    imagen: guitarraelectrica2
   },
   {
     id: "95456",
@@ -89,7 +89,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin1 // Usar la imagen importada
+    imagen: violin1
   },
   {
     id: "2154",
@@ -98,7 +98,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin2 // Usar la imagen importada
+    imagen: violin2
   },
   {
     id: "63262",
@@ -107,7 +107,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: violin2 // Usar la imagen importada
+    imagen: violin2
   },
   {
     id: "75454",
@@ -116,7 +116,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateria1 // Usar la imagen importada
+    imagen: bateria1
   },
   {
     id: "9563264",
@@ -125,7 +125,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateria2 // Usar la imagen importada
+    imagen: bateria2
   },
   {
     id: "521445",
@@ -134,7 +134,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: bateriaelectrica // Usar la imagen importada
+    imagen: bateriaelectrica
   },
   {
     id: "311151",
@@ -143,7 +143,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: cajonperuano // Usar la imagen importada
+    imagen: cajonperuano
   },
   {
     id: "9569653",
@@ -152,7 +152,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: armonica // Usar la imagen importada
+    imagen: armonica
   },
   {
     id: "365652",
@@ -161,7 +161,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: trompeta // Usar la imagen importada
+    imagen: trompeta
   },
   {
     id: "224525",
@@ -170,7 +170,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: saxo // Usar la imagen importada
+    imagen: saxo
   },
   {
     id: "9656324",
@@ -179,7 +179,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: auriculares // Usar la imagen importada
+    imagen: auriculares
   },
   {
     id: "75421",
@@ -188,7 +188,7 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: interfaz // Usar la imagen importada
+    imagen: interfaz
   },
   {
     id: "45686",
@@ -197,13 +197,13 @@ const productos = [
     descripcion: "Descripcion",
     stock: "10",
     precio: "300",
-    imagen: mixer // Usar la imagen importada
+    imagen: mixer
   },
 ];
 
 const obtenerProductos = () => {
   return new Promise((resolve, reject) => {
-    // Simulamos un retraso de red de 3 segundos
+    // Simulamos un retraso de red de 1.5 segundos
     setTimeout(() => {
       resolve(productos);
     }, 1500);
