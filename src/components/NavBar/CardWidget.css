@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .CardWidgetContainer {
   display: flex;
   align-items: center;
@@ -5,15 +7,23 @@
   background-color: #5e6b70;
   border-radius: 15px;
   padding: 15px;
+  position: absolute;
+  right: 20px; /* Ubica el widget a la derecha del navbar */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.CardWidgetNumber {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 3rem;
-  font-family: Arial, sans-serif;
+.CardWidgetImg {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.CardWidgetCounter {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -21,11 +31,11 @@
     padding: 5px;
   }
 
-  .CardWidgetImage {
+  .CardWidgetImg svg {
     max-width: 40px;
   }
 
-  .CardWidgetNumber {
-    font-size: 1.5rem;
+  .CardWidgetCounter {
+    font-size: 1rem;
   }
 }

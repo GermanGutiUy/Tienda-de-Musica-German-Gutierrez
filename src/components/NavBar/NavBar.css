@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .NavBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #051422;
-  padding: 0%;
+  padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
   position: fixed;
@@ -11,39 +13,35 @@
   z-index: 1000;
 }
 
-.NavBar .brand img {
-  display: block;
-  max-width: 70%;
+.NavBar .brand {
+  flex: 0 0 auto;
+  max-width: 100px;
   height: auto;
 }
 
-.NavBar ul {
+.navLinks {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espacio entre los botones */
+  gap: 20px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex: 1;
+  justify-content: center;
 }
 
-.NavBar ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 100px; /* Ajusta el relleno */
+.navLinks li {
+  padding: 10px 20px;
   background-color: #e8cfa7;
   border-radius: 10px;
   color: #000000;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  flex: 1 1 auto; 
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   white-space: nowrap;
-  font-size: 50px;
-  font-family: Arial, sans-serif;
 }
 
-.NavBar ul li:hover {
+.navLinks li:hover {
   background-color: #a15d28;
   color: #ddd;
 }
@@ -51,32 +49,31 @@
 @media (max-width: 768px) {
   .NavBar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 10px;
   }
 
-  .NavBar ul {
+  .navLinks {
     flex-direction: column;
-    width: 100%;
     gap: 10px;
+    width: 100%;
+    text-align: center;
   }
 
-  .NavBar ul li {
+  .navLinks li {
     width: 100%;
-    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .NavBar .brand {
+    max-width: 80px;
   }
 }
 
 /* Configuración para pantallas muy chicas */
 @media (max-width: 480px) {
-  .NavBar .brand img {
-    max-width: 100%;
-  }
-
-  .NavBar ul {
-    gap: 5px;
-  }
-
-  .NavBar ul li {
+  .navLinks li {
     padding: 10px;
+    font-size: 16px;
   }
 }
