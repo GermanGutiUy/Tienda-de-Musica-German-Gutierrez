@@ -1,34 +1,67 @@
+/* ItemDetail.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .itemDetailContainer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 150px auto 20px; /* Ajustado margen superior para quedar debajo del nav */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Asegura que el título esté arriba */
+  gap: 20px;
+}
+
+.itemDetailContainer h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center; /* Centra el título */
+}
+
+.itemDetailContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.itemDetailContent img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 50%;
+}
+
+.itemDetailContent p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+  flex: 1 1 50%;
+  margin: 0;
+}
+
+.itemDetailContainer .itemCount {
+  margin-top: 20px;
+  text-align: center; /* Centra el contador debajo de la descripción */
+}
+
+@media (max-width: 768px) {
+  .itemDetailContent {
+    flex-direction: column;
   }
-  
-  .itemDetailContainer h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: #333333;
-    margin-bottom: 10px;
+
+  .itemDetailContent img {
+    margin-bottom: 20px;
   }
-  
-  .itemDetailContainer p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #666666;
-    line-height: 1.5;
+
+  .itemDetailContent p {
+    text-align: justify;
   }
-  
-  .itemDetailContainer img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
+}

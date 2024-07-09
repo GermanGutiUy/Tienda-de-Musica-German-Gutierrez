@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ContadorLogic from './contadorLogic';
+import './ItemCount.css'
 
 const ItemCount = ({ agregarAlCarrito, stock }) => {
   const [contador, setContador] = useState(0);
@@ -17,9 +18,11 @@ const ItemCount = ({ agregarAlCarrito, stock }) => {
   };
 
   return (
-    <div>
-      <ContadorLogic contador={contador} aumentarContador={aumentarContador} disminuirContador={disminuirContador} />
-      <button onClick={() => agregarAlCarrito(contador)}>Agregar al carrito</button>
+    <div className="itemCountContainer">
+      <button className="counterButton" onClick={disminuirContador}>-</button>
+      <span className="counterDisplay">{contador}</span>
+      <button className="counterButton" onClick={aumentarContador}>+</button>
+      <button className="addToCartButton" onClick={() => agregarAlCarrito(contador)}>Agregar al carrito</button>
     </div>
   );
 };
