@@ -3,7 +3,7 @@
 
 .CarritoContainer {
   max-width: 1000px;
-  margin: 150px auto 0; /* Añadido margen superior para quedar debajo del nav */
+  margin: 150px auto 0; /* Ajustado margen superior para quedar debajo del nav */
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 10px;
@@ -52,28 +52,6 @@
   color: #a15d28;
 }
 
-.divCarrito p:last-child {
-  font-weight: 700;
-  color: #a15d28;
-}
-
-.divCarrito button {
-  padding: 10px 20px;
-  background-color: #051422;
-  color: #e8cfa7;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.divCarrito button:hover {
-  background-color: #a15d28;
-  color: #ffffff;
-}
-
 .CarritoContainer p {
   font-weight: 700;
   font-size: 18px;
@@ -99,34 +77,19 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .divCarrito {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
+/* Estilos para mensaje de carrito vacío */
+.divCarritoVacio {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 350px auto;
+}
 
-  .divCarrito img {
-    margin-bottom: 10px;
-  }
-
-  .divCarrito p {
-    font-size: 14px;
-  }
-
-  .divCarrito p:nth-child(2) {
-    text-align: left;
-  }
-
-  .divCarrito p:nth-child(3) {
-    text-align: left;
-  }
-
-  .divCarrito button {
-    align-self: center;
-  }
-
-  .CarritoContainer p {
-    text-align: left;
-  }
+.divCarritoVacio h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #333333;
 }
