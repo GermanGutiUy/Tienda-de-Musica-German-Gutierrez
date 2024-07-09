@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ContadorLogic from './contadorLogic';
 
-const ItemCount = ({ agregarAlCarrito }) => {
+const ItemCount = ({ agregarAlCarrito, stock }) => {
   const [contador, setContador] = useState(0);
 
   // Aumento de contador
   const aumentarContador = () => {
-    if (contador < 10) // Agregar el stock máximo
+    if (contador < stock) // Agregar el stock máximo
       setContador(contador + 1);
   };
 

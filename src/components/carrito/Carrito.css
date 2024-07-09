@@ -1,0 +1,132 @@
+/* Carrito.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.CarritoContainer {
+  max-width: 1000px;
+  margin: 150px auto 0; /* Añadido margen superior para quedar debajo del nav */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.divCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #e8cfa7;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divCarrito:hover {
+  background-color: #d7b58a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.divCarrito img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.divCarrito p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  margin: 0 10px;
+}
+
+.divCarrito p:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+
+.divCarrito p:nth-child(3) {
+  font-weight: 700;
+  color: #a15d28;
+}
+
+.divCarrito p:last-child {
+  font-weight: 700;
+  color: #a15d28;
+}
+
+.divCarrito button {
+  padding: 10px 20px;
+  background-color: #051422;
+  color: #e8cfa7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.divCarrito button:hover {
+  background-color: #a15d28;
+  color: #ffffff;
+}
+
+.CarritoContainer p {
+  font-weight: 700;
+  font-size: 18px;
+  color: #051422;
+  text-align: right;
+}
+
+.CarritoContainer button {
+  padding: 10px 20px;
+  background-color: #051422;
+  color: #e8cfa7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.CarritoContainer button:hover {
+  background-color: #a15d28;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .divCarrito {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .divCarrito img {
+    margin-bottom: 10px;
+  }
+
+  .divCarrito p {
+    font-size: 14px;
+  }
+
+  .divCarrito p:nth-child(2) {
+    text-align: left;
+  }
+
+  .divCarrito p:nth-child(3) {
+    text-align: left;
+  }
+
+  .divCarrito button {
+    align-self: center;
+  }
+
+  .CarritoContainer p {
+    text-align: left;
+  }
+}

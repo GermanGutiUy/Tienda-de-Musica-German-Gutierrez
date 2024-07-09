@@ -58,7 +58,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Fender Jazz Bass",
   descripcion: "Fender Jazz Bass American Professional II",
-  stock: "10",
+  stock: "2",
   precio: "300",
   imagen: bajo2,
   descripcionLargo: `
@@ -92,7 +92,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Fender CC-60S",
   descripcion: "Fender Classical Guitar CC-60S",
-  stock: "10",
+  stock: "3",
   precio: "300",
   imagen: guitarra1,
   descripcionLargo: `
@@ -119,7 +119,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Fender CN-60S",
   descripcion: "Fender Classical Guitar CN-60S",
-  stock: "10",
+  stock: "130",
   precio: "300",
   imagen: guitarra2,
   descripcionLargo: `
@@ -146,7 +146,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Fender CC-60SCE",
   descripcion: "Fender Classical Guitar CC-60SCE",
-  stock: "10",
+  stock: "1",
   precio: "300",
   imagen: guitarra3,
   descripcionLargo: `
@@ -173,7 +173,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Memphis MG32",
   descripcion: "Memphis MG32",
-  stock: "10",
+  stock: "5",
   precio: "300",
   imagen: guitarraelectrica1,
   descripcionLargo: `
@@ -201,7 +201,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Memphis MG100",
   descripcion: "Memphis MG100",
-  stock: "10",
+  stock: "9",
   precio: "300",
   imagen: guitarraelectrica2,
   descripcionLargo: `
@@ -227,7 +227,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Violín Profesional",
   descripcion: "Violín Acústico Profesional",
-  stock: "10",
+  stock: "7",
   precio: "300",
   imagen: violin1,
   descripcionLargo: `
@@ -253,7 +253,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Violín 4/4",
   descripcion: "Violín Eléctrico 4/4",
-  stock: "10",
+  stock: "22",
   precio: "300",
   imagen: violin2,
   descripcionLargo: `
@@ -279,7 +279,7 @@ const productos = [
   categoria: "cuerda",
   nombre: "Violín Amateur",
   descripcion: "Violín Acústico para Principiantes",
-  stock: "10",
+  stock: "56",
   precio: "300",
   imagen: violin2,
   descripcionLargo: `
@@ -305,7 +305,7 @@ const productos = [
   categoria: "percusion",
   nombre: "Pearl Export",
   descripcion: "Pearl Export EXX725S/C",
-  stock: "10",
+  stock: "3",
   precio: "300",
   imagen: bateria1,
   descripcionLargo: `
@@ -333,7 +333,7 @@ const productos = [
   categoria: "percusion",
   nombre: "Pearl Roadshow",
   descripcion: "Pearl Roadshow RS525SC/C",
-  stock: "10",
+  stock: "2",
   precio: "300",
   imagen: bateria2,
   descripcionLargo: `
@@ -360,7 +360,7 @@ const productos = [
   categoria: "percusion",
   nombre: "Batería Alesis Nitro Mesh Kit",
   descripcion: "Alesis Nitro Mesh Kit",
-  stock: "10",
+  stock: "2",
   precio: "300",
   imagen: bateriaelectrica,
   descripcionLargo: `
@@ -387,7 +387,7 @@ const productos = [
   categoria: "percusion",
   nombre: "Cajón Peruano",
   descripcion: "Cajón Flamenco Peruano",
-  stock: "10",
+  stock: "5",
   precio: "300",
   imagen: cajonperuano,
   descripcionLargo: `
@@ -413,7 +413,7 @@ const productos = [
   categoria: "viento",
   nombre: "Hohner Special 20",
   descripcion: "Hohner Special 20",
-  stock: "10",
+  stock: "5",
   precio: "300",
   imagen: armonica,
   descripcionLargo: `
@@ -439,7 +439,7 @@ const productos = [
   categoria: "viento",
   nombre: "Yamaha YTR-2330",
   descripcion: "Yamaha YTR-2330",
-  stock: "10",
+  stock: "7",
   precio: "300",
   imagen: trompeta,
   descripcionLargo: `
@@ -465,7 +465,7 @@ const productos = [
   categoria: "viento",
   nombre: "Yamaha YAS-280",
   descripcion: "Yamaha YAS-280",
-  stock: "10",
+  stock: "12",
   precio: "300",
   imagen: saxo,
   descripcionLargo: `
@@ -491,7 +491,7 @@ const productos = [
   categoria: "audiopro",
   nombre: "Sony WH-1000XM4",
   descripcion: "Sony WH-1000XM4",
-  stock: "10",
+  stock: "32",
   precio: "300",
   imagen: auriculares,
   descripcionLargo: `
@@ -519,7 +519,7 @@ const productos = [
   categoria: "audiopro",
   nombre: "Focusrite Scarlett 2i2",
   descripcion: "Focusrite Scarlett 2i2 (3rd Gen)",
-  stock: "10",
+  stock: "8",
   precio: "300",
   imagen: interfaz,
   descripcionLargo: `
@@ -547,7 +547,7 @@ const productos = [
   categoria: "audiopro",
   nombre: "Behringer Xenyx",
   descripcion: "Behringer Xenyx Q802USB",
-  stock: "10",
+  stock: "3",
   precio: "300",
   imagen: mixer,
   descripcionLargo: `
