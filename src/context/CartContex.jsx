@@ -12,7 +12,7 @@ const CartProvider = ({ children }) => {
 
         if (condicion) {
             //Sumar la cantidad nueva
-            const prodcutosModificados = carrito.map((productoCarrito) => {
+            const productosModificados = carrito.map((productoCarrito) => {
                 if (productoCarrito.id === producto.id){
                     return { ...productoCarrito, cantidad : productoCarrito.cantidad + producto.cantidad }
                 }else{
@@ -20,7 +20,7 @@ const CartProvider = ({ children }) => {
                 }
             })
 
-            setCarrito(prodcutosModificados)
+            setCarrito(productosModificados)
 
         } else {
             //agregar como producto nuevo
