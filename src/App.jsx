@@ -9,6 +9,7 @@ import Contact from './components/footer/Contact.jsx';
 import NewsLetter from './components/footer/NewsLetter.jsx';
 import { CartProvider } from './context/CartContex.jsx';
 import Carrito from './components/carrito/Carrito.jsx'
+import Checkout from "./components/checkout/Checkout.jsx"
  
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path = "/detalle/:idProducto" element = {<ItemDetailContainer />}/>
         <Route path = "/detalle/:idProducto" element = {<Error />}/>
         <Route path = "/carrito" element = {<Carrito />}/>
+        <Route path = "/checkout" element = {<Checkout />}/>
       </Routes>
       </CartProvider>
       <NewsLetter/>

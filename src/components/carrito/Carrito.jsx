@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContex';
 import './Carrito.css';
 import { Link } from 'react-router-dom';
+import Checkout from "../checkout/Checkout"
 
 const Carrito = () => {
   const { carrito, borrarProductoPorId, vaciarCarrito, precioTotal } = useContext(CartContext);
@@ -30,7 +31,7 @@ const Carrito = () => {
       ))}
       <p>Total total: $ {precioTotal()}</p>
       <button onClick={vaciarCarrito}>Vaciar carrito</button>
-      <button>Terminar compra</button>
+      <Link to= "/checkout">Terminar compra</Link>
     </div>
   );
 };
