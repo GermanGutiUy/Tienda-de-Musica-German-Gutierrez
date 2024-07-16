@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Formulario from "./Formulario";
-import { CartContext } from "../../context/CartContext"; // Asegúrate de que el nombre del archivo y la exportación sean correctos
+import { CartContext } from "../../context/CartContext";
 import db from "../../db/db";
 import { collection, addDoc } from 'firebase/firestore';
 

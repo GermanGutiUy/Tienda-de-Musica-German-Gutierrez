@@ -50,8 +50,8 @@ const CartProvider = ({ children }) => {
     }
 
     //Elimino un elemento en especifico del carrito
-    const borrarProductoPorId = (idProdcuto) => {
-        const productosFiltrados = carrito.filter ((productoCarrito) => productoCarrito.id !== idProdcuto)
+    const borrarProductoPorId = (idProducto) => {
+        const productosFiltrados = carrito.filter ((productoCarrito) => productoCarrito.id !== idProducto)
         setCarrito(productosFiltrados)
     }
 

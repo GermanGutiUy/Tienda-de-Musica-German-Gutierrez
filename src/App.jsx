@@ -7,7 +7,7 @@ import Error from './components/Error.jsx'
 import Formulario from './components/formulario/Formulario.jsx';
 import Contact from './components/footer/Contact.jsx';
 import NewsLetter from './components/footer/NewsLetter.jsx';
-import { CartProvider } from './context/CartContex.jsx';
+import { CartProvider } from './context/CartContext.jsx';
 import Carrito from './components/carrito/Carrito.jsx'
 import Checkout from "./components/checkout/Checkout.jsx"
  

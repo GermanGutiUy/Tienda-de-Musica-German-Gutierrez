@@ -1,6 +1,6 @@
 import { GiShoppingCart } from "react-icons/gi"; //Importo el carrito de reac icons
 import './CardWidget.css';
-import { CartContext } from "../../context/CartContex";
+import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 

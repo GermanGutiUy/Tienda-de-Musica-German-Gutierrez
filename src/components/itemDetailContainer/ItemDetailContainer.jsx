@@ -6,39 +6,33 @@ import useLoading from '../hooks/useLoading.jsx';
 import Loading from '../ItemListContainer/loading.jsx'; 
 import './ItemDetailContainer.css'
 import db from "../../db/db.js"
-import {doc, getDoc} from "firebase/firestore"
+import { doc, getDoc } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
-    const [producto, serProducto] = useState({})
+    const [producto, setProducto] = useState({})
 
     const { idProducto } = useParams()
 
-    const idProdcuto = () =>{
+    const obtenerProducto = () => {
       const docRef = doc(db, "productos", idProducto)
       getDoc(docRef)
-      .them((respuesta) => {
+      .then((respuesta) => {
         const data = { id: respuesta.id, ...respuesta.data() }
         setProducto(data)
       })
     }
 
+    const { isLoading, showLoading, hideLoading } = useLoading();
 
-
-    const { isLoading, showLoading, hideLoading } = useLoading(); //aca
-
-    useEffect (() =>{
+    useEffect(() => {
       obtenerProducto()
     }, [])
 
-
-
-  return (
-    <div className="itemlistcontainer">
-    {isLoading ? <Loading /> : <ItemDetail producto = {producto} />}
-    </div>
-
-
-  )
+    return (
+      <div className="itemlistcontainer">
+        {isLoading ? <Loading /> : <ItemDetail producto={producto} />}
+      </div>
+    )
 }
 
 export default ItemDetailContainer
