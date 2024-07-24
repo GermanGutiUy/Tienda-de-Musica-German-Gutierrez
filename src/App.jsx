@@ -27,9 +27,9 @@ function App() {
           <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
           <Route path="/categoria/:formulario" element={<Formulario />} />
           <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
-          <Route path="/detalle/:idProducto" element={<Error />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </CartProvider>
       <NewsLetter />

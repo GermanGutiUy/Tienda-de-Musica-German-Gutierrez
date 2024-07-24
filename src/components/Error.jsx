@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './error.css';
 
 const Error = () => {
   return (
-    <div>
-      <h2>Eror 404 Pagina no encontrada</h2>
+    <div className="ErrorContainer">
+      <h2>Error 404 - Página no encontrada</h2>
     </div>
-  )
+  );
 }
 
-export default Error
+export default Error;

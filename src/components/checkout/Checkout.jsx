@@ -7,6 +7,8 @@ import Formulario from "./Formulario";
 import { CartContext } from "../../context/CartContext";
 import validateForm from '../utils/validacionFormulario';
 
+import './checkout.css';
+
 const Checkout = () => {
     const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
     const [datosFrom, setDatosForm] = useState({
@@ -22,7 +24,7 @@ const Checkout = () => {
     };
 
     const enviarOrden = async (event) => {
-        event.preventDefault();
+        if (event) event.preventDefault(); // Evita errores si el evento no está presente
         // Formateo al orden
         const datos = {
             comprador: { ...datosFrom },
@@ -31,11 +33,11 @@ const Checkout = () => {
         };
 
         //Validacion de datos de la orden
-        const response = await validateForm(datosFrom)
+        const response = await validateForm(datosFrom);
         if (response.status === "success") {
             subirOrden(datos);
         } else {
-            toast.warning(response.massage)
+            toast.warning(response.message);
         }
     };
 

@@ -61,18 +61,6 @@ const NavBar = () => {
             </div>
           </Link>
         </li>
-
-        <li>
-          <Link to="/categoria/blog" className="category">
-            <p>Blog</p>
-            <div className="img-category">
-              <img
-                src=""
-                alt=""
-              />
-            </div>
-          </Link>
-        </li>
       </ul>
 
       <CardWidget />

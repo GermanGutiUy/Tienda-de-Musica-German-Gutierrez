@@ -1,0 +1,19 @@
+/* error.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.ErrorContainer {
+  max-width: 600px;
+  margin: 350px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.ErrorContainer h2 {
+  font-size: 24px;
+  color: #d9534f;
+  margin: 0;
+}

@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ContadorEventListener = () => {
-  const [contador, setContador] = useState(1);
+const ContadorEventListener = ({ stock }) => {
+  const [contador, setContador] = useState(0);
 
   const handleClick = () => {
-    setContador(prevContador => prevContador + 1);
+    setContador(prevContador => (prevContador < stock ? prevContador + 1 : prevContador));
   };
 
   useEffect(() => {
     const botonSumar = document.getElementById("boton-sumar");
     botonSumar.addEventListener("click", handleClick);
 
-    // Esta función se ejecuta cuando nuestro componente se desmonta
     return () => {
-      // Eliminamos nuestro evento
       botonSumar.removeEventListener("click", handleClick);
     };
   }, []);
@@ -21,7 +19,7 @@ const ContadorEventListener = () => {
   return (
     <div>
       <p>Valor: {contador}</p>
-      <button id="boton-sumar"> + </button>
+      <button id="boton-sumar">+</button>
     </div>
   );
 };

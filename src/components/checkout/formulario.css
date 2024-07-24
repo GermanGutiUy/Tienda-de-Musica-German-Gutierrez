@@ -1,0 +1,62 @@
+/* Formulario.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.FormularioContainer {
+  max-width: 600px;
+  margin: 150px auto 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  position: relative; /* Añadido para posicionar el contenedor del botón */
+}
+
+.FormularioContainer label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.FormularioContainer input {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.FormularioContainer input[type="email"] {
+  margin-bottom: 20px;
+}
+
+.FormularioContainer p {
+  font-size: 14px;
+  color: #d9534f;
+  margin: 0;
+}
+
+.FormularioFooter {
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón a la derecha */
+  margin-top: 20px; /* Margen superior para separar el botón del contenido del formulario */
+}
+
+.FormularioFooter button {
+  padding: 12px 25px;
+  background-color: #051422;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.FormularioFooter button:hover {
+  background-color: #a15d28;
+  color: #ffffff;
+}
