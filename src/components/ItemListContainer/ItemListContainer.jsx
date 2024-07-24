@@ -30,7 +30,7 @@ const ItemListContainer = () => {
                 setProductos(data)
             })
     }
-
+    
     const obtenerProductosFiltrados = () => {
         const productosRef = collection(db, "productos")
         const q = query(productosRef, where("categoria", "==", idCategoria))
