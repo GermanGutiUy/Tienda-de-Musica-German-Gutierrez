@@ -11,18 +11,21 @@
   color: #ffffff;
 }
 
-.ContactDiv, .WorkDiv {
+.ContactDiv,
+.WorkDiv {
   flex: 1;
   margin: 10px;
 }
 
-.Contact, .Work {
+.Contact,
+.Work {
   font-size: 20px;
   margin-bottom: 20px;
   color: #e8cfa7;
 }
 
-.ListContact, .ListWork {
+.ListContact,
+.ListWork {
   font-size: 15px;
 }
 
@@ -31,7 +34,8 @@
     flex-direction: column;
   }
 
-  .ContactDiv, .WorkDiv {
+  .ContactDiv,
+  .WorkDiv {
     margin: 10px 0;
   }
 }

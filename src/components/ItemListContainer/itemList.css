@@ -6,8 +6,10 @@
   padding: 2em;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 columnas */
-  gap: 1em; /* Espacio entre los items */
+  grid-template-columns: repeat(5, 1fr);
+  /* 4 columnas */
+  gap: 1em;
+  /* Espacio entre los items */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -23,12 +25,14 @@
 
 @media (max-width: 768px) {
   .itemListDiv {
-    grid-template-columns: repeat(3, 1fr); /* 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 columnas en pantallas pequeñas */
   }
 }
 
 @media (max-width: 480px) {
   .itemListDiv {
-    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    grid-template-columns: 1fr;
+    /* 1 columna en pantallas muy pequeñas */
   }
 }

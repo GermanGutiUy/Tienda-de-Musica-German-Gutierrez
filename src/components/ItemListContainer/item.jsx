@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+
 import './item.css'
 
 const item = ({ producto }) => {
@@ -22,11 +23,11 @@ const item = ({ producto }) => {
   }
 
   return (
-    <Link 
-      to={"/detalle/" + producto.id} 
-      className="item" 
-      style={estilosCard} 
-      onMouseOver={handleMouseOver} 
+    <Link
+      to={"/detalle/" + producto.id}
+      className="item"
+      style={estilosCard}
+      onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
     >
       <img src={producto.imagen} width={200} alt={producto.nombre} />

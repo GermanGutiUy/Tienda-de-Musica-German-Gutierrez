@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import CardWidget from './CardWidget'; // Import Foto del carrito de compras
 import Logo from "../../img/Logo.jpg"; // Import Foto del logo
+
 import './NavBar.css';
-import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (

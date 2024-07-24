@@ -3,7 +3,8 @@
 
 .CarritoContainer {
   max-width: 1000px;
-  margin: 150px auto 0; /* Ajustado margen superior para quedar debajo del nav */
+  margin: 150px auto 0;
+  /* Ajustado margen superior para quedar debajo del nav */
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 10px;

@@ -8,7 +8,8 @@
   border-radius: 15px;
   padding: 15px;
   position: absolute;
-  right: 20px; /* Ubica el widget a la derecha del navbar */
+  right: 20px;
+  /* Ubica el widget a la derecha del navbar */
   top: 50%;
   transform: translateY(-50%);
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const useLoading = () => {
-    const [isLoading,setIsLoading] = useState (false)
+    const [isLoading, setIsLoading] = useState(false)
 
     //mostrar loading
     const showLoading = () => {
@@ -10,7 +10,7 @@ const useLoading = () => {
 
     //ocultar loading
     const hideLoading = () => {
-        setIsLoading (false)
+        setIsLoading(false)
     }
 
     return { isLoading, showLoading, hideLoading }

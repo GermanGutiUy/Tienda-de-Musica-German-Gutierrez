@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import ContadorLogic from './contadorLogic';
+
 import './ItemCount.css'
 
 const ItemCount = ({ agregarAlCarrito, stock }) => {

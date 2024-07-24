@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
+
+import db from "../../db/db";
 import Formulario from "./Formulario";
 import { CartContext } from "../../context/CartContext";
-import db from "../../db/db";
-import { collection, addDoc } from 'firebase/firestore';
-import validateForm from '../utils/validacionFormulario'; 
-import { toast } from 'react-toastify';
+import validateForm from '../utils/validacionFormulario';
 
 const Checkout = () => {
     const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
@@ -20,7 +21,7 @@ const Checkout = () => {
         setDatosForm({ ...datosFrom, [event.target.name]: event.target.value });
     };
 
-    const enviarOrden = async(event) => {
+    const enviarOrden = async (event) => {
         event.preventDefault();
         // Formateo al orden
         const datos = {
@@ -32,8 +33,8 @@ const Checkout = () => {
         //Validacion de datos de la orden
         const response = await validateForm(datosFrom)
         if (response.status === "success") {
-        subirOrden(datos);
-        } else{
+            subirOrden(datos);
+        } else {
             toast.warning(response.massage)
         }
     };

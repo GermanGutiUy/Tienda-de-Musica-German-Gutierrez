@@ -8,14 +8,14 @@ const CartProvider = ({ children }) => {
 
     const addItem = (producto) => {
 
-        const condicion = estaEnElCarrito (producto.id)
+        const condicion = estaEnElCarrito(producto.id)
 
         if (condicion) {
             //Sumar la cantidad nueva
             const productosModificados = carrito.map((productoCarrito) => {
-                if (productoCarrito.id === producto.id){
-                    return { ...productoCarrito, cantidad : productoCarrito.cantidad + producto.cantidad }
-                }else{
+                if (productoCarrito.id === producto.id) {
+                    return { ...productoCarrito, cantidad: productoCarrito.cantidad + producto.cantidad }
+                } else {
                     return productoCarrito
                 }
             })
@@ -24,23 +24,23 @@ const CartProvider = ({ children }) => {
 
         } else {
             //agregar como producto nuevo
-            setCarrito( [ ...carrito, producto ] )
+            setCarrito([...carrito, producto])
         }
 
     }
     const estaEnElCarrito = (idProducto) => {
-        const condicion =  carrito.some((producto) => producto.id === idProducto )
+        const condicion = carrito.some((producto) => producto.id === idProducto)
         return condicion
     }
 
     const cantidadTotal = () => {
-        const cantidad = carrito.reduce( (total, producto) => total + producto.cantidad, 0)
+        const cantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0)
         return cantidad
     }
 
     //Devuelve el valor total de la cocmpra
     const precioTotal = () => {
-        const precio = carrito.reduce( (total, producto) => total + (producto.cantidad * producto.precio), 0.00 )
+        const precio = carrito.reduce((total, producto) => total + (producto.cantidad * producto.precio), 0.00)
         return precio
     }
 
@@ -51,14 +51,14 @@ const CartProvider = ({ children }) => {
 
     //Elimino un elemento en especifico del carrito
     const borrarProductoPorId = (idProducto) => {
-        const productosFiltrados = carrito.filter ((productoCarrito) => productoCarrito.id !== idProducto)
+        const productosFiltrados = carrito.filter((productoCarrito) => productoCarrito.id !== idProducto)
         setCarrito(productosFiltrados)
     }
 
-    return(
-        <CartContext.Provider value = { { carrito, addItem, cantidadTotal, vaciarCarrito, borrarProductoPorId, precioTotal } }>
-            { children }
+    return (
+        <CartContext.Provider value={{ carrito, addItem, cantidadTotal, vaciarCarrito, borrarProductoPorId, precioTotal }}>
+            {children}
         </CartContext.Provider>
     )
 }
-export {CartProvider, CartContext}
+export { CartProvider, CartContext }

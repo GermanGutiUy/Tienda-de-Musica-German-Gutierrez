@@ -3,13 +3,15 @@
 
 .itemDetailContainer {
   max-width: 1000px;
-  margin: 150px auto 20px; /* Ajustado margen superior para quedar debajo del nav */
+  margin: 150px auto 20px;
+  /* Ajustado margen superior para quedar debajo del nav */
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column; /* Asegura que el título esté arriba */
+  flex-direction: column;
+  /* Asegura que el título esté arriba */
   gap: 20px;
 }
 
@@ -19,7 +21,8 @@
   font-size: 24px;
   color: #333333;
   margin-bottom: 10px;
-  text-align: center; /* Centra el título */
+  text-align: center;
+  /* Centra el título */
 }
 
 .itemDetailContent {
@@ -49,7 +52,8 @@
 
 .itemDetailContainer .itemCount {
   margin-top: 20px;
-  text-align: center; /* Centra el contador debajo de la descripción */
+  text-align: center;
+  /* Centra el contador debajo de la descripción */
 }
 
 @media (max-width: 768px) {

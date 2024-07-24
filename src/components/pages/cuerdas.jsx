@@ -1,27 +1,28 @@
 import React from 'react'
-import { obtenerProductos } from "../../data/data.js" // Importo data
 import { useState, useEffect } from 'react';
+
+import { obtenerProductos } from "../../data/data.js" // Importo data
 import ItemList from "../ItemListContainer/itemList.jsx"
 
 const cuerdas = () => {
-    useEffect (()=>{
+  useEffect(() => {
 
-        obtenerProductos()
-        .then((respuesta) => {
-          serProductos(respuesta)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-        .finally(() => {
-          console.log("Finañlizo la promesa")
-        })
-    
-      }, [])
+    obtenerProductos()
+      .then((respuesta) => {
+        serProductos(respuesta)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {
+        console.log("Finañlizo la promesa")
+      })
+
+  }, [])
 
   return (
     <div>
-        <ItemList productos = {productos} />
+      <ItemList productos={productos} />
     </div>
   )
 }

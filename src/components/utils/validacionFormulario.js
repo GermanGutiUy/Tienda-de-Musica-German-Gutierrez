@@ -6,10 +6,10 @@ let userSchema = object({
     email: string().email("El campo email no tiene el formato correcto").required("El campo email no debe estar vacio")
 })
 
-const validateForm = async(dataForm) => {
+const validateForm = async (dataForm) => {
     try {
-       await userSchema.validate(dataForm)
-       return { status: "success" }
+        await userSchema.validate(dataForm)
+        return { status: "success" }
     } catch (error) {
         return { status: "error", massage: error.message }
     }
