@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ToastContainer } from 'react-toastify';
 
 import NavBar from './components/NavBar/NavBar';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Error from './components/Error.jsx'

@@ -1,5 +1,3 @@
-/*
-
 import { useEffect, useState } from "react"
 
 const hocBuscador = (component) => {
@@ -10,8 +8,8 @@ const hocBuscador = (component) => {
         useEffect(() => {
 
             fetch("Link")
-            .then ((respuesta) => respuesta,json())
-            .then((data) => serProductos(Data))
+                .then((respuesta) => respuesta, json())
+                .then((data) => serProductos(Data))
 
         }, [])
 
@@ -31,8 +29,8 @@ const hocBuscador = (component) => {
         return (
             productos && (
                 <div>
-                    <imput type = "text" placeholder = "Bucar..." onChange = {changeImput} />
-                    <Component productos = { search(productos)}/>
+                    <imput type="text" placeholder="Bucar..." onChange={changeImput} />
+                    <Component productos={search(productos)} />
                 </div>
             )
         )
@@ -40,5 +38,3 @@ const hocBuscador = (component) => {
 }
 
 export default hocBuscador
-
-*/
