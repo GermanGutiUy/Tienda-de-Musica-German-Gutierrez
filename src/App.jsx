@@ -10,12 +10,16 @@ import NewsLetter from './components/footer/NewsLetter.jsx';
 import { CartProvider } from './context/CartContext.jsx';
 import Carrito from './components/carrito/Carrito.jsx'
 import Checkout from "./components/checkout/Checkout.jsx"
- 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
+
 function App() {
   return (
     <BrowserRouter>
     <CartProvider>
       <NavBar />
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
       <Routes>
         <Route path = "/" element = {<ItemListContainer />} />
         <Route path = "/categoria/:idCategoria" element = {<ItemListContainer />}/>
