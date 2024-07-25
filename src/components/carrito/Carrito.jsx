@@ -6,7 +6,6 @@ import Checkout from "../checkout/Checkout"
 
 import './Carrito.css';
 
-
 const Carrito = () => {
   const { carrito, borrarProductoPorId, vaciarCarrito, precioTotal } = useContext(CartContext);
 
@@ -15,7 +14,7 @@ const Carrito = () => {
     return (
       <div className='divCarritoVacio'>
         <h2> No hay productos en el carrito </h2>
-        <Link to="/">Home</Link>
+        <Link to="/" className="homeLink">Home</Link>
       </div>
     )
   }
@@ -33,8 +32,10 @@ const Carrito = () => {
         </div>
       ))}
       <p>Total total: $ {precioTotal()}</p>
-      <button onClick={vaciarCarrito}>Vaciar carrito</button>
-      <Link to="/checkout">Terminar compra</Link>
+      <div className="buttonContainer">
+        <button onClick={vaciarCarrito}>Vaciar carrito</button>
+        <Link to="/checkout" className="checkoutButton">Terminar compra</Link>
+      </div>
     </div>
   );
 };

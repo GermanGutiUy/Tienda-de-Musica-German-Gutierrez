@@ -1,4 +1,3 @@
-/* Carrito.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .CarritoContainer {
@@ -60,7 +59,15 @@
   text-align: right;
 }
 
-.CarritoContainer button {
+.CarritoContainer .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.CarritoContainer button,
+.CarritoContainer .checkoutButton,
+.CarritoContainer .homeLink {
   padding: 10px 20px;
   background-color: #051422;
   color: #e8cfa7;
@@ -70,10 +77,16 @@
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   margin: 10px;
+  text-decoration: none;
+  /* Eliminar subrayado de enlaces */
+  text-align: center;
+  /* Centrar texto dentro del enlace */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.CarritoContainer button:hover {
+.CarritoContainer button:hover,
+.CarritoContainer .checkoutButton:hover,
+.CarritoContainer .homeLink:hover {
   background-color: #a15d28;
   color: #ffffff;
 }

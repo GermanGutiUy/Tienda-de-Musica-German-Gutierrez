@@ -3,13 +3,14 @@
 
 .FormularioContainer {
   max-width: 600px;
-  margin: 150px auto 0;
+  margin: 50px auto 0;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
-  position: relative; /* Añadido para posicionar el contenedor del botón */
+  position: relative;
+  /* Añadido para posicionar el contenedor del botón */
 }
 
 .FormularioContainer label {
@@ -41,8 +42,10 @@
 
 .FormularioFooter {
   display: flex;
-  justify-content: flex-end; /* Alinea el botón a la derecha */
-  margin-top: 20px; /* Margen superior para separar el botón del contenido del formulario */
+  justify-content: flex-end;
+  /* Alinea el botón a la derecha */
+  margin-top: 20px;
+  /* Margen superior para separar el botón del contenido del formulario */
 }
 
 .FormularioFooter button {

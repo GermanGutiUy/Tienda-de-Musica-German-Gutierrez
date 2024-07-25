@@ -11,41 +11,51 @@ import './checkout.css';
 
 const Checkout = () => {
     const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
-    const [datosFrom, setDatosForm] = useState({
+    const [datosForm, setDatosForm] = useState({
         nombre: "",
         telefono: "",
         email: ""
     });
 
     const [idOrden, setIdOrden] = useState(null);
+    const [fechaHora, setFechaHora] = useState("");
+    const [ordenDetalle, setOrdenDetalle] = useState([]);
 
     const guardarDatosImput = (event) => {
-        setDatosForm({ ...datosFrom, [event.target.name]: event.target.value });
+        setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
     };
 
     const enviarOrden = async (event) => {
-        if (event) event.preventDefault(); // Evita errores si el evento no está presente
-        // Formateo al orden
-        const datos = {
-            comprador: { ...datosFrom },
-            productos: [...carrito],
-            total: precioTotal()
-        };
+        if (event) event.preventDefault();
+        const dataForm = { ...datosForm, repetirEmail: datosForm.email };
 
-        //Validacion de datos de la orden
-        const response = await validateForm(datosFrom);
+        const response = await validateForm(dataForm);
         if (response.status === "success") {
-            subirOrden(datos);
+            const now = new Date();
+            const orden = {
+                comprador: datosForm,
+                productos: carrito,
+                total: precioTotal(),
+                fechaHora: now.toLocaleString()
+            };
+            subirOrden(orden);
         } else {
             toast.warning(response.message);
         }
     };
 
-    const subirOrden = (datos) => {
+    const subirOrden = (orden) => {
         const ordenesRef = collection(db, "ordenes");
-        addDoc(ordenesRef, datos)
+        addDoc(ordenesRef, orden)
             .then((respuesta) => {
                 setIdOrden(respuesta.id);
+                setFechaHora(orden.fechaHora);
+                setOrdenDetalle(orden.productos);
+                setDatosForm({
+                    nombre: "",
+                    telefono: "",
+                    email: ""
+                });
             })
             .finally(() => {
                 vaciarCarrito();
@@ -53,14 +63,23 @@ const Checkout = () => {
     };
 
     return (
-        <div>
+        <div className="checkoutContainer">
             {idOrden ? (
-                <div>
+                <div className="orderSummary">
                     <h2>Orden enviada con éxito</h2>
-                    <p>Guarde el id de su orden: {idOrden}</p>
+                    <p>Guarde el id de su orden: <strong>{idOrden}</strong></p>
+                    <p>Fecha y hora de la orden: <strong>{fechaHora}</strong></p>
+                    <h3>Detalles del pedido:</h3>
+                    <ul className="orderDetails">
+                        {ordenDetalle.map((producto) => (
+                            <li key={producto.id}>
+                                {producto.nombre} - ${producto.precio} x {producto.cantidad}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             ) : (
-                <Formulario datosFrom={datosFrom} guardarDatosImput={guardarDatosImput} enviarOrden={enviarOrden} />
+                <Formulario datosFrom={datosForm} guardarDatosImput={guardarDatosImput} enviarOrden={enviarOrden} />
             )}
         </div>
     );

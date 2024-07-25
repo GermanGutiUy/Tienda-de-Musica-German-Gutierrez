@@ -11,7 +11,7 @@ const Formulario = ({ datosFrom, guardarDatosImput, enviarOrden }) => {
     const dataForm = { ...datosFrom, repetirEmail };
     const validation = await validateForm(dataForm);
     if (validation.status === "success") {
-      enviarOrden(event); // Pasa el evento aquí
+      enviarOrden(event);
     } else {
       setErrors({ ...errors, general: validation.message });
     }
