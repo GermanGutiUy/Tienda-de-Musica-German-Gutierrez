@@ -1,22 +1,5 @@
-import bajo1 from '../img/cuerda/bajo1.jpg';
-import bajo2 from '../img/cuerda/bajo2.jpg';
-import guitarra1 from '../img/cuerda/guitarra1.jpg';
-import guitarra2 from '../img/cuerda/guitarra2.jpg';
-import guitarra3 from '../img/cuerda/guitarra3.jpg';
-import guitarraelectrica1 from '../img/cuerda/guitarraelectrica1.jpg';
-import guitarraelectrica2 from '../img/cuerda/guitarraelectrica2.jpg';
-import violin1 from '../img/cuerda/violin1.jpg';
-import violin2 from '../img/cuerda/violin2.jpg';
-import bateria1 from '../img/percusion/bateria1.jpg';
-import bateria2 from '../img/percusion/bateria2.jpg';
-import bateriaelectrica from '../img/percusion/bateriaelectrica.jpg';
-import cajonperuano from '../img/percusion/cajonperuano.jpg';
-import armonica from '../img/viento/armonica.jpg';
-import trompeta from '../img/viento/trompeta.jpg';
-import saxo from '../img/viento/saxo.jpg';
-import auriculares from '../img/audiopro/auriculares.jpg';
-import interfaz from '../img/audiopro/interfaz.jpg';
-import mixer from '../img/audiopro/mixer.jpg';
+import db from "../db/db.js"
+import { addDoc, collection } from "firebase/firestore";
 
 const productos = [
   {
@@ -26,7 +9,7 @@ const productos = [
     descripcion: "Fender Precision Bass American Professional II",
     stock: "10",
     precio: "300",
-    imagen: bajo1,
+    imagen: "../img/cuerda/bajo1.jpg",
     descripcionLargo: `
     Experimenta la esencia del legendario sonido Fender con el Precision Bass American Professional II. Este bajo eléctrico icónico redefine la versatilidad y la comodidad para músicos de todos los estilos. Con un cuerpo de aliso o fresno, dependiendo del acabado elegido, y un mástil de arce en forma de "C" moderna con diapasón de palo de rosa o arce, este bajo no solo ofrece un diseño estéticamente clásico, sino también una ergonomía excepcional.
 
@@ -60,7 +43,7 @@ const productos = [
     descripcion: "Fender Jazz Bass American Professional II",
     stock: "2",
     precio: "300",
-    imagen: bajo2,
+    imagen: "../img/cuerda/bajo2.jpg",
     descripcionLargo: `
     Sumérgete en la versatilidad legendaria del Fender Jazz Bass American Professional II. Este bajo icónico combina el diseño clásico con innovaciones modernas para ofrecer un instrumento que se adapta a cualquier estilo musical. Con un cuerpo de aliso o fresno, dependiendo del acabado elegido, y un mástil de arce en forma de "C" moderna con diapasón de palo de rosa o arce, el Jazz Bass no solo impresiona visualmente, sino que también proporciona una comodidad excepcional y un acceso sin restricciones a los trastes.
 
@@ -94,7 +77,7 @@ const productos = [
     descripcion: "Fender Classical Guitar CC-60S",
     stock: "3",
     precio: "300",
-    imagen: guitarra1,
+    imagen: "../img/cuerda/guitarra1.jpg",
     descripcionLargo: `
     Descubre la elegancia y el sonido distintivo de la Fender Classical Guitar CC-60S. Este instrumento combina la artesanía tradicional con características modernas para ofrecer una experiencia musical excepcional tanto para principiantes como para músicos experimentados. Con una tapa de abeto sólido y un fondo y aros de caoba, la CC-60S proyecta un tono cálido y resonante con una respuesta equilibrada en todo el espectro tonal.
 
@@ -121,7 +104,7 @@ const productos = [
     descripcion: "Fender Classical Guitar CN-60S",
     stock: "130",
     precio: "300",
-    imagen: guitarra2,
+    imagen: "../img/cuerda/guitarra2.jpg",
     descripcionLargo: `
     Explora la belleza tonal y la artesanía excepcional de la Fender Classical Guitar CN-60S. Este instrumento representa la fusión perfecta entre tradición y modernidad, ofreciendo un sonido rico y resonante junto con un toque cómodo y una ejecución fluida. Con una tapa de abeto sólido y un cuerpo de caoba laminada, la CN-60S proyecta un tono cálido y equilibrado que responde con claridad y expresividad.
 
@@ -148,7 +131,7 @@ const productos = [
     descripcion: "Fender Classical Guitar CC-60SCE",
     stock: "1",
     precio: "300",
-    imagen: guitarra3,
+    imagen: "../img/cuerda/guitarra3.jpg",
     descripcionLargo: `
     Sumérgete en el mundo del sonido clásico con la Fender Classical Guitar CC-60SCE. Esta guitarra combina la elegancia tradicional con las características modernas necesarias para músicos exigentes. Con una tapa de abeto sólido y un cuerpo de caoba, la CC-60SCE ofrece un tono cálido y resonante con una proyección excepcional.
 
@@ -175,7 +158,7 @@ const productos = [
     descripcion: "Memphis MG32",
     stock: "5",
     precio: "300",
-    imagen: guitarraelectrica1,
+    imagen: "../img/cuerda/guitarraelectrica1.jpg",
     descripcionLargo: `
     Experimenta el poder y la versatilidad de la guitarra eléctrica Memphis MG32. Diseñada para músicos que buscan un sonido potente y una estética atractiva, la MG32 combina elementos clásicos con características modernas para ofrecer una experiencia de juego excepcional.
 
@@ -203,7 +186,7 @@ const productos = [
     descripcion: "Memphis MG100",
     stock: "9",
     precio: "300",
-    imagen: guitarraelectrica2,
+    imagen: "../img/cuerda/guitarraelectrica2.jpg",
     descripcionLargo: `
     Sumérgete en el mundo del rock con la guitarra eléctrica Memphis MG100. Este instrumento combina potencia, estilo y versatilidad para satisfacer las demandas de músicos en todos los niveles. Con un cuerpo de tilo que ofrece un tono cálido y resonante, la MG100 está equipada con dos pastillas humbucker dobles que proporcionan un sonido potente y lleno de matices.
 
@@ -229,7 +212,7 @@ const productos = [
     descripcion: "Violín Acústico Profesional",
     stock: "7",
     precio: "300",
-    imagen: violin1,
+    imagen: "../img/cuerda/violin1.jpg",
     descripcionLargo: `
     Descubre la belleza y la expresividad del violín acústico profesional. Este instrumento combina artesanía tradicional con materiales de alta calidad para ofrecer un sonido rico y una experiencia musical excepcional. Con una tapa de abeto sólido, fondo y aros de arce flameado, y un acabado brillante que resalta la belleza natural de la madera, este violín no solo es un placer visual, sino también auditivo.
 
@@ -255,7 +238,7 @@ const productos = [
     descripcion: "Violín Eléctrico 4/4",
     stock: "22",
     precio: "300",
-    imagen: violin2,
+    imagen: "../img/cuerda/violin2.jpg",
     descripcionLargo: `
     Experimenta la versatilidad y la innovación con el violín eléctrico 4/4. Este instrumento combina la elegancia clásica de un violín acústico con las características modernas necesarias para amplificar y explorar nuevos sonidos. Con una construcción cuidadosamente diseñada que incluye una tapa de abeto sólido y un cuerpo de arce, el violín eléctrico 4/4 ofrece un sonido rico y equilibrado tanto acústicamente como amplificado.
 
@@ -281,7 +264,7 @@ const productos = [
     descripcion: "Violín Acústico para Principiantes",
     stock: "56",
     precio: "300",
-    imagen: violin2,
+    imagen: "../img/cuerda/violin2.jpg",
     descripcionLargo: `
     Sumérgete en el mundo de la música con el violín acústico para principiantes. Este instrumento está diseñado para ofrecer una introducción accesible y asequible al arte del violín, ideal para estudiantes y músicos amateur. Con una construcción robusta que incluye una tapa de abeto laminado y un cuerpo de arce, el violín ofrece un tono claro y resonante que facilita el aprendizaje y la práctica.
 
@@ -307,7 +290,7 @@ const productos = [
     descripcion: "Pearl Export EXX725S/C",
     stock: "3",
     precio: "300",
-    imagen: bateria1,
+    imagen: "../img/cuerda/bateria1.jpg",
     descripcionLargo: `
     Experimenta el poder y la calidad legendaria con la batería Pearl Export EXX725S/C. Diseñada para satisfacer las demandas de músicos de todos los niveles, esta batería ofrece un sonido dinámico y una construcción robusta que garantiza un rendimiento excepcional en cualquier situación musical.
 
@@ -335,7 +318,7 @@ const productos = [
     descripcion: "Pearl Roadshow RS525SC/C",
     stock: "2",
     precio: "300",
-    imagen: bateria2,
+    imagen: "../img/cuerda/bateria2.jpg",
     descripcionLargo: `
     Sumérgete en el mundo de la percusión con la batería Pearl Roadshow RS525SC/C. Diseñada para principiantes y músicos que buscan calidad a un precio asequible, esta batería ofrece un sonido excepcional y una construcción robusta que garantiza una experiencia de juego gratificante.
 
@@ -362,7 +345,7 @@ const productos = [
     descripcion: "Alesis Nitro Mesh Kit",
     stock: "2",
     precio: "300",
-    imagen: bateriaelectrica,
+    imagen: "../img/cuerda/bateriaelectrica.jpg",
     descripcionLargo: `
     Descubre la versatilidad y la potencia de la batería electrónica Alesis Nitro Mesh Kit. Diseñada para ofrecer una experiencia de percusión inmersiva y realista, esta batería es perfecta para músicos de todos los niveles que buscan practicar, grabar o actuar con un kit versátil y de alta calidad.
 
@@ -389,7 +372,7 @@ const productos = [
     descripcion: "Cajón Flamenco Peruano",
     stock: "5",
     precio: "300",
-    imagen: cajonperuano,
+    imagen: "../img/cuerda/cajonperuano.jpg",
     descripcionLargo: `
     Sumérgete en los ritmos vibrantes de la cultura peruana con el cajón flamenco peruano. Este instrumento esencial en la música folclórica y flamenca ofrece un sonido distintivo y una construcción artesanal que captura la esencia y la tradición del cajón peruano.
 
@@ -415,7 +398,7 @@ const productos = [
     descripcion: "Hohner Special 20",
     stock: "5",
     precio: "300",
-    imagen: armonica,
+    imagen: "../img/cuerda/armonica.jpg",
     descripcionLargo: `
     Explora el mundo del blues y la música folk con la armónica Hohner Special 20. Este instrumento icónico es conocido por su tono brillante y su respuesta suave, ideal para músicos de todos los niveles que buscan expresarse con un sonido distintivo y lleno de carácter.
 
@@ -441,7 +424,7 @@ const productos = [
     descripcion: "Yamaha YTR-2330",
     stock: "7",
     precio: "300",
-    imagen: trompeta,
+    imagen: "../img/cuerda/trompeta.jpg",
     descripcionLargo: `
     Sumérgete en el mundo del jazz, la música clásica y más con la trompeta Yamaha YTR-2330. Este instrumento es conocido por su calidad de construcción, su facilidad de ejecución y su sonido brillante y claro, ideal para músicos principiantes y aficionados que buscan una trompeta confiable y versátil.
 
@@ -467,7 +450,7 @@ const productos = [
     descripcion: "Yamaha YAS-280",
     stock: "12",
     precio: "300",
-    imagen: saxo,
+    imagen: "../img/cuerda/saxo.jpg",
     descripcionLargo: `
     Sumérgete en el mundo del jazz, el blues y la música clásica con el saxofón Yamaha YAS-280. Este saxofón alto es ideal para estudiantes y músicos que buscan un instrumento de alta calidad, fácil de tocar y con un sonido característico y brillante.
 
@@ -493,7 +476,7 @@ const productos = [
     descripcion: "Sony WH-1000XM4",
     stock: "32",
     precio: "300",
-    imagen: auriculares,
+    imagen: "../img/cuerda/auriculares.jpg",
     descripcionLargo: `
     Sumérgete en una experiencia auditiva excepcional con los auriculares Sony WH-1000XM4. Diseñados para ofrecer calidad de sonido superior y comodidad durante horas, estos auriculares son ideales para audiófilos, profesionales de la música y viajeros frecuentes que valoran el rendimiento y la versatilidad.
 
@@ -521,7 +504,7 @@ const productos = [
     descripcion: "Focusrite Scarlett 2i2 (3rd Gen)",
     stock: "8",
     precio: "300",
-    imagen: interfaz,
+    imagen: "../img/cuerda/interfaz.jpg",
     descripcionLargo: `
     Mejora tu experiencia de grabación y producción musical con la interfaz de audio Focusrite Scarlett 2i2 (3rd Gen). Esta interfaz compacta y potente es ideal para músicos y productores que buscan calidad de sonido profesional y versatilidad en sus estudios caseros o portátiles.
 
@@ -549,7 +532,7 @@ const productos = [
     descripcion: "Behringer Xenyx Q802USB",
     stock: "3",
     precio: "300",
-    imagen: mixer,
+    imagen: "../img/cuerda/mixer.jpg",
     descripcionLargo: `
     Potencia tu configuración de audio con el mixer Behringer Xenyx Q802USB. Este compacto mezclador es perfecto para músicos, podcasters y estudios caseros que buscan versatilidad, calidad de sonido y conectividad avanzada en una unidad fácil de usar.
 
@@ -572,13 +555,12 @@ const productos = [
 
 ];
 
-const obtenerProductos = () => {
-  return new Promise((resolve, reject) => {
-    // Simulamos un retraso de red de 1.5 segundos
-    setTimeout(() => {
-      resolve(productos);
-    }, 1500);
+const seedProducts = () => {
+  productos.map(( {id, ...rest} ) => {
+    const productosRef = collection(db, "productos")
+    addDoc(productosRef, rest)
   });
-};
+  return
+}
 
-export { obtenerProductos };
+seedProducts()

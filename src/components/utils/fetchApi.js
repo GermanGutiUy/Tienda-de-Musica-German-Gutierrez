@@ -38,7 +38,7 @@ const addProduct = (newProduct) => {
 }
 
 //
-const modProdcut = (idProducts, mod) => {
+const modProduct = (idProducts, mod) => {
     const modJson = JSON.stringify(mod)
     return fetch("link"/ + idProducts, {
         method: "PUT",
@@ -56,6 +56,6 @@ const modProdcut = (idProducts, mod) => {
 
 
 
-export {getProducts,getProductsById,addProduct,modProdcut}
+export {getProducts,getProductsById,addProduct,modProduct}
 
 */
