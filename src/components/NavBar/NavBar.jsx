@@ -18,10 +18,7 @@ const NavBar = () => {
           <Link to="/categoria/cuerda" className="category">
             <p>Cuerda</p>
             <div className="img-category">
-              <img
-                src=""
-                alt=""
-              />
+              <img src="" alt="" />
             </div>
           </Link>
         </li>
@@ -30,10 +27,7 @@ const NavBar = () => {
           <Link to="/categoria/viento" className="category">
             <p>Viento</p>
             <div className="img-category">
-              <img
-                src=""
-                alt=""
-              />
+              <img src="" alt="" />
             </div>
           </Link>
         </li>
@@ -42,10 +36,7 @@ const NavBar = () => {
           <Link to="/categoria/percusion" className="category">
             <p>Percusion</p>
             <div className="img-category">
-              <img
-                src=""
-                alt=""
-              />
+              <img src="" alt="" />
             </div>
           </Link>
         </li>
@@ -54,10 +45,7 @@ const NavBar = () => {
           <Link to="/categoria/audiopro" className="category">
             <p>Audio Pro</p>
             <div className="img-category">
-              <img
-                src=""
-                alt=""
-              />
+              <img src="" alt="" />
             </div>
           </Link>
         </li>

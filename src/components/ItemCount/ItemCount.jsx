@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ItemCount.css';
 
 const ItemCount = ({ agregarAlCarrito, stock }) => {
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(1);
 
   const aumentarContador = () => {
     if (contador < stock) {

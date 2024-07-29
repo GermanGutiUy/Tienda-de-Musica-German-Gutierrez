@@ -33,12 +33,16 @@
   padding: 10px 20px;
   background-color: #e8cfa7;
   border-radius: 10px;
-  color: #000000;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   white-space: nowrap;
+}
+
+.navLinks li a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .navLinks li:hover {

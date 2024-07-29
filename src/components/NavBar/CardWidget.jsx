@@ -7,19 +7,17 @@ import { CartContext } from "../../context/CartContext";
 import './CardWidget.css';
 
 const CardWidget = () => {
-
-  const { cantidadTotal } = useContext(CartContext)
-
-  let cantidad = cantidadTotal()
+  const { cantidadTotal } = useContext(CartContext);
+  let cantidad = cantidadTotal();
 
   return (
     <Link to="/carrito" className="CardWidgetContainer">
       <div className="CardWidgetImg">
         <GiShoppingCart size={70} />
       </div>
-      <p className="CardWidgetCounter">{cantidad > 0 && cantidad}</p> {/* //De momento, numero de carrito fijo */}
+      <p className="CardWidgetCounter">{cantidad > 0 && cantidad}</p> {/* Número de carrito fijo */}
     </Link>
-  )
+  );
 }
 
-export default CardWidget
+export default CardWidget;

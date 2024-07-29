@@ -9,15 +9,17 @@
   padding: 15px;
   position: absolute;
   right: 20px;
-  /* Ubica el widget a la derecha del navbar */
   top: 50%;
   transform: translateY(-50%);
+  text-decoration: none;
+  color: #000000;
 }
 
 .CardWidgetImg {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000000;
 }
 
 .CardWidgetCounter {
